@@ -20,7 +20,7 @@ public class SampleProgram {
 	// SampleProgram.java
 	
 	// 3. 명령창에서 이 프로그램을 컴파일하는 명령은?
-	// cd 명령어로 SampleProgram.java가 있는 위치로 갈 것
+	// jdk/work 경로에 저장한 뒤 cmd에서 아래 명령어 입력
 	// javac SampleProgram.java
 	
 	// 4. 명령창에서 이 프로그램을 실행하는 명령은?
