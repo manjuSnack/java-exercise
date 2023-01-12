@@ -8,7 +8,7 @@
  */
 import java.util.Scanner;
 
-public class CircleInclusion {
+public class Chapter2_Prac09 {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
