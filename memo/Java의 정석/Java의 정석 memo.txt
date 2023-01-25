@@ -6,7 +6,7 @@ Java의 정석(기초편)
 
 ---
 
-🍘 #Chapter 1장, 01 자바(Java)란?
+🍘 #ch1-1 자바(Java)란?
 
 🍘 구성
 : 실행환경( JRE, Java Run-time Environment ) + 개발도구(JDK, Java Development Kit) + 라이브러리(API, Application Programing Interface)
@@ -26,7 +26,7 @@ Web Application
 
 ----
 
-🍘 #Chapter 1장, 02 자바의 역사
+🍘 #ch1-2 자바의 역사
 
 JDK 1.0 ( 1996 )
 J2SE ( 1998 )
@@ -46,7 +46,7 @@ Java SE 8 ( 2014 )
 
 ----
 
-🍘 #Chapter 1장, 03 자바의 특징
+🍘 #ch1-3 자바의 특징
 
 배우기 쉬운 객체지향 언어
 : C++, Java, Python, Javascript가 있다.
@@ -64,7 +64,7 @@ Multi-thread를 지원
 
 ----
 
-🍘 #Chapter 1장, 04 자바 가상 머신 ( JVM, Java Virtual Machine )
+🍘 #ch1-4 자바 가상 머신 ( JVM, Java Virtual Machine )
 
 : Windows mediaplayer나 Winamp와 같이 Java를 실행하기 위한 가상 기계(소프트웨어)라고 한다.
 
@@ -74,16 +74,16 @@ Byte Code를 기계어로 변화해주는 JIT Compile와 여러 기능으로 Com
 
 ----
 
-🍘 #Chapter 1장, 05 ~ 06 자바 개발도구(JDK, Java Development Kit) 설치하기, 설정하기
+🍘 #ch1-5~6 자바 개발도구(JDK, Java Development Kit) 설치하기, 설정하기
 
 🍘 Java Eclipse 설치
 : JDK 11과 eclipse를 받는다. 실제로는 압축하여 USB 등에 옮겨 작업한다.
 
 🍘 환경 변수 설정
-시스템 환경 변수 - 시스템 변수 - Path - jdk경로\bin - 확인
+시스템 환경 변수-시스템 변수-Path-jdk경로\bin-확인
 : 환경 변수를 맨 위로 올려야 Database 작업 시 충돌 방지
 
-시스템 환경 변수 - 시스템 변수 - 새로 만들기 - JAVA_HOME,
+시스템 환경 변수-시스템 변수-새로 만들기-JAVA_HOME,
 : Tomcat이 JDK가 어디에 있는지 확인하기 위한 변수
 
 Java Install 확인
@@ -101,7 +101,7 @@ STS도 압축만 풀고 내부에 STS를 실행시키면 된다.
 
 ----
 
-🍘 #Chapter 1장, 07 자바 API( Application Programing Interface )
+🍘 #ch1-7 자바 API( Application Programing Interface )
 
 : Package 목록, Class 목록으로 All Class에 대한 내용을 참고할 수 있다.
 
@@ -115,7 +115,7 @@ INDEX
 
 ----
 
-🍘 #Chapter 1장, 08~09 자바 첫 프로그램 작성하기, 자바 프로그램의 실행과정
+🍘 #ch1-8~9 자바 첫 프로그램 작성하기, 자바 프로그램의 실행과정
 
 work 폴더 생성
 : 경로\jdk11\에서 work 폴더 생성해 둔다. 이곳에 .java 파일을 저장하는데 꼭 첫 문자는 대문자로 작성한다.
@@ -140,7 +140,7 @@ D:\Coding\java\jdk11\work 경로에서
 
 ----
 
-🍘 #Chapter 1장, 10~12 Eclipse 설치하기, Eclipse로 Java 프로그램 개발하기, Eclipse의 View, Perspective, Workspace
+🍘 #ch1-10~12 Eclipse 설치하기, Eclipse로 Java 프로그램 개발하기, Eclipse의 View, Perspective, Workspace
 
 🍘 Download할 Eclipse 종류.
 
@@ -188,7 +188,7 @@ Windows > Show View > Navigator
 
 ----
 
-🍘 Ch01. 13~16장, Eclipse의 단축키, Eclipse의 자동완성 기능, Eclipse의 주석(Comment), 자주 발생하는 에러와 해결방법
+🍘 ch1-13~16장, Eclipse의 단축키, Eclipse의 자동완성 기능, Eclipse의 주석(Comment), 자주 발생하는 에러와 해결방법
 
 🍘 Ex1_1 참고
 
@@ -198,7 +198,7 @@ ctrl+D : 한줄 삭제
 ctrl+alt+down : 행단위 복사
 
 🍘 단축키 재설정 방법
-: Windows - Preferences - General - Appearance - Keys - copy line 검색(행단위 복사일 경우) - Binding 에서 단축키 설정 - Apply and Close
+: Windows-Preferences-General-Appearance-Keys-copy line 검색(행단위 복사일 경우)-Binding 에서 단축키 설정-Apply and Close
 
 alt+shift+A : 멀티컬럼 편집(토글:같은 단축키로 On, Off)
 alt+up, down : 선택한 행단위 이동
@@ -209,24 +209,24 @@ ctrl+/ : 주석(토글)
 ctrl+space : 자동완성
 
 🍘 자동완성 재설정 방법
-Windows - Preferences - Java - Editor - Templates - sysout(바꾸고 싶은 자동완성 이름 찾아 선택) - Edit - Name 변경(sysout를 sop로 바꿈) - Rename - Apply Close
+Windows-Preferences-Java-Editor-Templates-sysout(바꾸고 싶은 자동완성 이름 찾아 선택)-Edit-Name 변경(sysout를 sop로 바꿈)-Rename-Apply Close
 
 🍘 자동완성 확장 방법
-Windows - Preferences - Java - Editor - Content Assist - Auto Activation treggers for Java에서 . 를 .abcdefghijklmnopqrstuvwxyz로 바꾸고 저장
+Windows-Preferences-Java-Editor-Content Assist-Auto Activation treggers for Java에서 . 를 .abcdefghijklmnopqrstuvwxyz로 바꾸고 저장
 
 ----
 
-🍘 #Ch01. 17~19장 책의 소스와 강의자료 다운로드, Eclipse 소스파일 가져오기, 내보내기
+🍘 #ch01-17~19장 책의 소스와 강의자료 다운로드, Eclipse 소스파일 가져오기, 내보내기
 
 🍘 소스파일 불러오기
-Eclipse 좌측 View에 Package Workspace에서 빈공간 우클릭 import - General - Existing Projects into Workspace - Select root directory로 Directory 찾기, Copy projects into workspace 체크(복사본으로 불러오기)
+Eclipse 좌측 View에 Package Workspace에서 빈공간 우클릭 import-General-Existing Projects into Workspace-Select root directory로 Directory 찾기, Copy projects into workspace 체크(복사본으로 불러오기)
 
 🍘 소스파일 내보내기
-Eclipse 좌측 View에 Package Workspace에서 빈공간 우클릭 export - General - Archive file - Export할 Project 선택, to archive file 경로 선택 
+Eclipse 좌측 View에 Package Workspace에서 빈공간 우클릭 export-General-Archive file-Export할 Project 선택, to archive file 경로 선택 
 
 ----
 
-🍘 #Chapter 2장. 01~02 화면에 글자 출력하기 - print()와 println(), 덧셈 뺄셈 계산하기
+🍘 #ch2-1~2 화면에 글자 출력하기-print()와 println(), 덧셈 뺄셈 계산하기
 
 print()
 : 줄바꿈하지 않고 출력. Console 창에서 커서가 있는 위치가 print()로 출력할 위치이다.
@@ -236,7 +236,7 @@ println()
 
 ----
 
-🍘 Chapter 2장. 03 변수의 선언과 저장
+🍘 ch2-3 변수의 선언과 저장
 
 Ex2_6.java 참고
 
@@ -279,7 +279,7 @@ Local variable (지역변수)
 
 ----
 
-🍘 #Chapter 2장. 04장 변수의 타입
+🍘 #ch2-4 변수의 타입
 
 Ex2_6.java 참고
 
@@ -313,7 +313,7 @@ Boolean은 true와 false의 값을 가지고 있다.
 
 ---
 
-🍘 #Chapter 2장. 05장 상수와 리터널
+🍘 #ch2-5 상수와 리터널
 
 : 상수(Constant)는 한 번만 값을 저장 가능한 변수이며 변수(variable)과는 다르게 이후 변경은 불가능하다. 작성하는 방법은 아래와 같다.
 
@@ -327,7 +327,7 @@ Literal은 그냥 값을 의미한다.
 
 ---
 
-🍘 #Ch.02 - 6장, 리터럴의 타입과 접미사
+🍘 #ch2-6, 리터럴의 타입과 접미사
 
 VarEx3.java 참고
 
@@ -364,22 +364,28 @@ float < double
 byte, short에 int literal도 저장가능하지만 byte와 short는 literal이 별도로 존재하지 않아 
 int 타입의 literal을 사용하지만 byte와 short의 범위를 초과시 에러가 발생 
 
-🍘 #Ch.02 - 7 ~ 8장, 문자, 문자열 리터럴, 문자열 결합
+---
+
+🍘 #ch2 -7~8, 문자, 문자열 리터럴, 문자열 결합
 
 VarEx3.java 참고.
 
 덧셈 연산자(+)는 피연산자가 모두 숫자일 때 두 수를 더하지만 어느 한 쪽이 String인 경우 다른 한쪽을 String으로 변환 후 두 String을 결합한다.
 
-🍘 #Ch.02 - 9장, 두 변수 바꾸기
+---
+
+🍘 #ch2-9, 두 변수 바꾸기
 
 Ex2_8.java 참고
 
 변수를 하나의 컵이라고 가정하고 우유와 주스를 바꿔 담고자 할 때 빈 컵이 필요할 것이다. 
 빈 컵을 이용해 우유와 주스를 바꿔 담을 수 있다. 이처럼 임시로 저장할 변수가 하나 더 필요하다.
 
-🍘 #Ch.02 - 10장, 기본형과 참조형
+---
 
-앞서 Ch.2-4 변수타입 참고.
+🍘 #ch2-10, 기본형과 참조형
+
+앞서 ch.2-4 변수타입 참고.
 
 Java는 C언어와 달리 참조형 변수(Reference Type) 간의 연산을 할 수 없으므로 실제 연산은 기본형(Primitive type)의 변수만으로 계산한다.
 
@@ -390,7 +396,7 @@ Java는 C언어와 달리 참조형 변수(Reference Type) 간의 연산을 할 
 
 🍘 참조형(Reference type)
 : 기본형을 제외한 나머지로써, String, System 등
-참조형은 갯수가 무한대이다. Ch 6장 참고
+참조형은 갯수가 무한대이다. ch 6장 참고
 
 메모리 주소를 저장(4 byte 또는 8byte)
 4 byte의 경우 40억의 변수(40억 byte인 약 4GB)를 사용할 수 있고 32bit JVM은 4byte를 사용한다.
@@ -398,7 +404,7 @@ Java는 C언어와 달리 참조형 변수(Reference Type) 간의 연산을 할 
 
 ---
 
-🍘 #Ch.02 - 11장, 기본형의 종류와 범위
+🍘 #ch2-11장, 기본형의 종류와 범위
 
 Ex2_6.java 참고
 
@@ -424,26 +430,26 @@ n비트로 표현할 수 있는 값의 개수
 : 2의 n승 개
 
 n비트로 표현할 수 있는 부호없는 정수의 범위
-: 0 ~ (2의 n승 - 1)
+: 0 ~ (2의 n승-1)
 
 n비트로 표현할 수 있는 부호있는 정수의 범위
-: -2의 n-1승 ~ (2의 n-1승 - 1)
+: -2의 n-1승 ~ (2의 n-1승-1)
 
 byte의 경우에는 0을 포함해야 하기 때문에 부호없는 정수에 경우 0~255(256개)이고, 부호있는 정수에 경우에는 -128 ~ 127(256개)까지이다.
 
 byte는 맨 좌측 bit를 부호비트(sign bit)라고 하며 0 (양수), 1(음수)를 표현하기 위해 쓰이기 때문에 2의 7승인 256개로 값을 표현한다.
 
-short는 2byte로 부호가 있는 정수의 범위로써 -2의 15승 ~ (2의 15승 - 1)으로 -32,768 ~ 32,767의 값이 쓰인다.
+short는 2byte로 부호가 있는 정수의 범위로써 -2의 15승 ~ (2의 15승-1)으로 -32,768 ~ 32,767의 값이 쓰인다.
 
 char는 2byte로 부호가 없는 정수의 범위로써 0 ~ 65,535의 값이 쓰인다. \u0000 ~ \uffff까지 표현한다.
 
-int는 4byte로 부호가 있는 정수의 범위로써 -2의 31승 ~ (2의 31승 - 1), 2의 31승은 2의 10승을 3번 곱한 뒤 2를 곱한 값을 표현한다.
+int는 4byte로 부호가 있는 정수의 범위로써 -2의 31승 ~ (2의 31승-1), 2의 31승은 2의 10승을 3번 곱한 뒤 2를 곱한 값을 표현한다.
 2E10(2의 10승)은 약 1,024이며 10의 3승이다. 고로 양수만으로 2 x E9 = 약 20억으로 -20억 ~ 20억까지 표현할 수 있다.
 
-long은 8byte로 부호가 있는 정수의 범위로써 -2의 63승 ~ (2의 63승 - 1), 2의 63승은 2의 3승과 2의 60승을 곱한 값으로, 8 x 10의 18승인 800경이다.
+long은 8byte로 부호가 있는 정수의 범위로써 -2의 63승 ~ (2의 63승-1), 2의 63승은 2의 3승과 2의 60승을 곱한 값으로, 8 x 10의 18승인 800경이다.
 고로 -800경 ~ 800경까지를 표현할 수 있다. 
 
-만약, 800경을 넘는 수를 사용할 경우 BigInteger라는 Class를 사용해야 한다. Ch 9장에서 설명한다.
+만약, 800경을 넘는 수를 사용할 경우 BigInteger라는 Class를 사용해야 한다. ch 9장에서 설명한다.
 
 float는 양수만을 표현할 경우 1.4E-45 ~ 3.4E38, 단 -1.4E-45 ~ 1.4E-45는 표현할 수 없는 범위이다.
 float는 4byte로 부호(Sign bit) 1개, 지수 8개, 가수 23개(정규화로 24개까지 표현할 수 있다)로 구성되어 있다.  
@@ -455,7 +461,7 @@ double은 8byte로 부호(Sign bit) 1개, 지수 11개, 가수 52개로 구성�
 
 ---
 
-🍘 #Ch.02 - 12~13장, printf를 이용한 출력
+🍘 #ch2-12~13장, printf를 이용한 출력
 
 PrintEx.java 참고
 
@@ -503,15 +509,13 @@ printf() method는 지시자(specifier)를 통해 선택해 원하는 출력이 
 
 % 다음에 정수는 전체 자리수를 결정하는 수이고, 소수점 뒤에 숫자를 표기할 경우 소수점 n번째 자리까지 표현하라는 의미이다.
 
-또한 % 뒤에 ' - ' 부호를 넣을 경우 정렬을 반대로 정렬한다. 기본 정렬은 우측정렬이며 ' - ' 부호를 작성할 경우 왼쪽정렬로 출력한다.
+또한 % 뒤에 '-' 부호를 넣을 경우 정렬을 반대로 정렬한다. 기본 정렬은 우측정렬이며 '-' 부호를 작성할 경우 왼쪽정렬로 출력한다.
 
 % 뒤에 숫자 0을 붙일 경우, 전체자리 중 빈자리에는 숫자 0으로 채운다.
 
 ---
 
-🍘 #Ch02-14, 화면으로부터 입력받기
-
-실습
+🍘 #ch02-14, 화면으로부터 입력받기
 
 ScanfEx1.java 참고
 
@@ -541,10 +545,9 @@ Double.parseDouble(문자열);은 문자열을 실수로 바꾼다.
 🍘 숫자를 문자열로 변환
 숫자 + "";는 숫자를 문자열로 바꾼다.
 
-
 ---
 
-🍘 #Ch02-15~16, 정수형의 오버플로우(Overflow, 넘치다)
+🍘 #ch02-15~16, 정수형의 오버플로우(Overflow, 넘치다)
 
 실습
 
@@ -554,7 +557,7 @@ Ex2_11.java 참고
 
 2진수도 마찬가지로 4개의 bit로 구성될 때 최대값인 1111 다음 10000이 아닌 다시 0000, 0001, 0010, ... 과 같이 다시 초기화되어 0부터 시작되는 것을 Overflow라고 한다.
 
-결국, 최대값 + 1은 최소값으로 돌아가며 최소값 - 1은 최대값으로 돌아간다.
+결국, 최대값 + 1은 최소값으로 돌아가며 최소값-1은 최대값으로 돌아간다.
 Overflow원리는 TV의 채널을 올리고 내리는 것과 유사하다.
 
 🍘 부호없는 정수와 부호있는 정수, 4bit의 경우
@@ -562,19 +565,19 @@ Overflow원리는 TV의 채널을 올리고 내리는 것과 유사하다.
 : 부호없는 정수인 4bit의 표현범위는 0(최소값) ~ 15(최대값)
 
 15 + 1 = 0
-0 - 1 = 15
+0-1 = 15
 
 : 부호있는 정수인 4bit의 표현범위는 -8(최소값) ~ 7(최대값)이다.
 
 7 + 1 = 8
-8 - 1 = 7
+8-1 = 7
 
 부호없는 정수는 2진수로 '0000'이 될 때 Overflow가 발생하고 
 부호있는 정수는 부호비트(Sign bit)가 0 (7은 0111)에서 1(-8은 1000)이 될 때 Overflow가 발생한다.
 
 ---
 
-🍘 #Ch02-17 타입간의 변환방법
+🍘 #ch02-17 타입간의 변환방법
 
 실습
 
@@ -583,7 +586,7 @@ Ex2_12.java를 참고.
 🍘 문자와 숫자간의 변환
 
 숫자 + '0' = 문자
-문자 - '0' = 숫자
+문자-'0' = 숫자
 
 문자 '0'을 더하거나 빼면 문자와 숫자로 변환할 수 있다.
 
@@ -600,18 +603,19 @@ Integer.parseInt(문자열로 된 숫자)로 문자열 "3"을 숫자 3으로 바
 
 Double.parseDouble(문자열로 된 실수)로 문자열을 실수로 바꿀 수 있다.
 
-CharAt(0)로는 문자열을 문자로 바꿀 수 있다. 예를 들면 변수 Literal.CharAt(0) 혹은 "3".CharAt(0)으로 '3'으로 바꿀 수 있다.
+charAt(0)로는 문자열을 문자로 바꿀 수 있다. 예를 들면 변수 Literal.charAt(0) 혹은 "3".charAt(0)으로 '3'으로 바꿀 수 있다.
+
 
 
 ---
 
 
-🍘 #Ch03-1~2, 연산자와 피연산자
+🍘 #ch03-1~2, 연산자와 피연산자
 
 Coding memo ( Java ).txt와 묶어 내용 정리할 때 다시 정리할 것.
 
 연산자
-: 연산을 수행하는 기호. + , - , * , / 을 일컫는다. 모든 연산자는 연산결과를 반환한다.
+: 연산을 수행하는 기호. + ,-, * , / 을 일컫는다. 모든 연산자는 연산결과를 반환한다.
 
 피연산자
 : 연산자의 연산 수행 대상이다.
@@ -621,7 +625,7 @@ Coding memo ( Java ).txt와 묶어 내용 정리할 때 다시 정리할 것.
 🍘 연산자의 종류
 
 🍘 산술연산자 ( 사칙연산과 나머지 연산(%) )
-: + - * / % << >>
+: +-* / % << >>
 
 🍘 비교연산자 ( 크고 작음과 같고 다름을 비교 )
 : > < >= <= == !=
@@ -664,12 +668,12 @@ instanceof : 객체지향에서 쓰인다.
 
 ---
 
-🍘 #Ch03-3~4, 연산자의 우선순위와 결합규칙
+🍘 #ch03-3~4, 연산자의 우선순위와 결합규칙
 
 🍘 연산자의 우선순위
 : 하나의 식(expression)에 연산자가 둘 이상 있을 때, 어떤 연산을 먼저 수행할지를 자동 결정하는 것. ( )에 경우 수동으로 먼저 수행한다.
 
-단항연산자인 양수, 음수를 표현하는 +, - 연산자가 이항 연산자인 + - * /인 사칙연산보다 우선순위가 높다.
+단항연산자인 양수, 음수를 표현하는 +,-연산자가 이항 연산자인 +-* /인 사칙연산보다 우선순위가 높다.
 곱셈과 나눗셈이 덧셈보다 우선순위가 높다.
 산술연산자가 비교연산자보다 우선순위가 높다.
 비교연산자가 논리연산자보다 우선순위가 높다
@@ -684,7 +688,7 @@ instanceof : 객체지향에서 쓰인다.
 
 ---
 
-🍘 #Ch03-5~6, 증감연산자, 부호연산자( 단항연산자 )
+🍘 #ch03-5~6, 증감연산자, 부호연산자( 단항연산자 )
 
 실습
 
@@ -726,14 +730,14 @@ i++; // 독립적으로 사용될 경우 ++i; 와 차이가 없다
 
 🍘 부호연산자
 
-' - '는 피연산자의 부호를 반대로 변경( 단항연산자이기도 하다 )
+'-'는 피연산자의 부호를 반대로 변경( 단항연산자이기도 하다 )
 ' + '는 Java에서는 아무런 일도 하지 않는다. 실제로 사용되지 않는다고 보는 것이 바람직하다.
 
 부호연산자는 boolean형과 char형을 제외한 기본형에만 사용할 수 있다.
 
 ---
 
-🍘 #Ch3-7~8, 형변환 연산자, 자동 형변환
+🍘 #ch3-7~8, 형변환 연산자, 자동 형변환
 
 🍘 형변환이란?
 : 연산을 수행하기 전에 타입을 일치 시켜야 하는데, 변수 또는 상수의 타입을 다른 타입으로 변환하는 것
@@ -783,15 +787,16 @@ long은 E19(10의 19승)이고 float는 E38(10의 38승)이므로 float가 더 �
 byte b = 100; 인 경우 '100'이 int 타입이지만, 값이 byte보다 작기 때문에 Compiler가 자동으로 변환해준다.
 byte i = b;인 경우, Literal이 '100'이라는 것이 알지만, Compiler는 b를 읽어올 때는 크기를 알 수 없어 (int) b; 로 표기해야 한다.
 
+
 ---
 
-🍘 #Ch3-9~10, 사칙 연산자, 산술변환
+🍘 #ch3-9~10, 사칙 연산자, 산술변환
 
 실습
 Ex3_6.java 참고
 Ex3_9.java 참고
 
-사칙 연산자 + - * /
+사칙 연산자 +-* /
 : +는 덧셈, -는 뺄셈, *는 곱하기, /는 나누기로 기본 4칙 연산할 때 필요한 수식이다.
 
 🍘 산술변환
@@ -813,13 +818,13 @@ char + short --> int + int --> int
 
 byte는 -128~127, char는 0~6만, short는 -3만 ~ 3만의 범위이지만 계산범위가 작기 때문에 Overflow로 인해 int로 형변환을 하고 계산을 한다.
 
-'2' - '0' --> 50 - 48 --> 2
+'2'-'0' --> 50-48 --> 2
 
 char는 int로 자동 형변환이 이뤄지는데 '2'와 '0'의 유니코드의 의한 값은 50과 48이다. 따라서 결과는 int type의 숫자 2가 된다.
 
 ---
 
-🍘 #Ch3-11~12, 반올림 Math.round(), 나머지 연산자
+🍘 #ch3-11~12, 반올림 Math.round(), 나머지 연산자
 
 실습
 Ex3_11.java 참고
@@ -838,7 +843,7 @@ long result = Math.round(4.52); 일때 result는 결과가 5이다.
 
 ---
 
-🍘 #Ch3-13~14, 비교 연산자, 문자열의 비교
+🍘 #ch3-13~14, 비교 연산자, 문자열의 비교
 
 비교연산자 > < >= <= == !=
 : 두 피연산자를 비교해서 True(참)과 False(거짓)을 반환
@@ -895,7 +900,7 @@ System.out.println(str1.equals(str2)); // true
 
 ---
 
-🍘 #Ch3-15~16, 논리 연산자, 논리 부정연산자
+🍘 #ch3-15~16, 논리 연산자, 논리 부정연산자
 
 🍘 논리연산자 && ||
 : 조건식을 연결할 때 사용하는 연산자
@@ -938,9 +943,10 @@ boolean b = true;
 
 ch < 'a' || ch > 'z' 보다는 !( 'a' <= ch && ch <= 'z' )로 적는 것이 더 직관적이다.
 
+
 ---
 
-🍘 #Ch3-17~19, 조건 연산자, 대입 연산자
+🍘 #ch3-17~19, 조건 연산자, 대입 연산자
 
 조건 연산자 ? :
 
@@ -987,7 +993,7 @@ i += 3;
 : i = i + 3;
 
 i -= 3;
-: i = i - 3;
+: i = i-3;
 
 i *= 3;
 : i = i * 3;
@@ -1234,5 +1240,127 @@ main() 안에 field(멤버 변수)로 선언하면 main() method안에 for문 �
 
 🍘 조건식
 : 1 >= 1, for( ; true; ) 혹 for ( ; ; )로 비어있는 경우에는 무한반복(infinite loop)가 되니 주의해야 한다.
+
+---
+
+🍘 #ch4-15, 중첩 for문
+
+Ex4_11.java
+
+🍘 중첩 for문
+
+: for문 안에 for문을 작성함으로써 연산을 수월하게 하는 방법 중 하나이다. 2중 for문을 주로 쓰고, 3중 이상은 주로 쓰지 않는다.
+
+구구단, 별(*) 찍기 등 만들면서 연습하면 2중 for문에 대해 이해하기 수월하다.
+
+---
+
+🍘 #ch4-16~19 while문, do-while문
+
+Ex4_12.java
+Ex4_13.java
+Ex4_14.java
+Ex4_15.java
+
+🍘 while문
+: 조건을 만족시키는 동안 Block { }을 반복, 주로 반복횟수를 모를 때 사용한다. 
+
+for문과는 달리 반복횟수에 대해 모를 때 while문을 사용한다. for문과 while문은 서로 바꿀 수 있다.
+
+while (조건식) {
+    // 조건식의 연산결과가 참(true)인 동안, 반복될 문장들을 적는다. 조건식이 거짓(false)가 되면 while문의 반복은 끝이 난다.
+}
+
+🍘 for문을 while문으로 바꿀 경우
+
+초기화;
+
+while (조건식) {
+    // 조건식의 연산결과가 참(true)일 때, 반복될 문장들을 적는다.
+    증감식;
+}
+
+으로 작성해야 한다.
+
+🍘 do-while문
+
+: while문과는 다르게 block { }을 최소한 한 번이상은 실행해 반복하며, 사용자 입력을 받을 때 유용하다.
+
+do {
+    // 조건식의 연산결과가 참(true)일 때 수행될 문장들을 적는다. ( 처음 한번은 무조건 실행 )
+} while (조건식); 
+
+끝에 세미콜론( ; )은 필히 작성할 것.
+
+while문으로 작성 시 입력받는 코드를 2번 이상 작성해야 하는 번거로움이 있을 때, do-while문으로 작성하면 입력받는 코드를 1번만 작성하면 된다.
+
+---
+
+🍘 #ch4-20~24 break문, continue문, 이름붙은 반복문
+
+Ex4_16.java
+Ex4_17.java
+Ex4_18.java
+Ex4_19.java
+Ex4_20.java
+
+🍘 break문
+
+: switch문, while문에서 자신이 포함된 하나의 반복문을 벗어날 때 사용된다. 
+
+🍘 무한반복(infinite loop)
+: while (true) { ... } 와 for ( ; ; ) 등은 무한반복이 되는 반복문이다. while문에서는 조건식이 생략되면 에러가 발생한다. 
+이 무한반복을 벗어나기 위해 break문을 사용한다.
+
+🍘 continue문
+
+: 자신이 포함된 반복문의 끝으로 이동, 다음 반복으로 건너뛴다. 
+
+🍘 이름붙은 반복문
+
+: 반복문에다 이름을 붙여서 하나 이상의 반복문에서 벗어날 수 있다. 기본적으로 break; 문은 자신이 포함된 하나의 반복문만을 벗어난다.
+
+반복문 앞에다 이름을 적고 콜론 ( : )으로 마무리한다. 
+
+name : for ( ... ) { ... } 로 적고 break name; 혹은 continue name;으로 해당 for문까지 벗어나거나 건너뛸 수 있다. 
+
+--- 
+
+🍘 #ch5-1~3, 배열의 생성과 선언, 배열의 인덱스
+
+🍘 배열
+: 배열은 같은 타입(Type)의 여러 변수를 하나의 묶음으로 다루는 것. 
+배열은 각 공간의 번호는 0~n으로 시작하며 이를 index라 부른다. 참조할 변수(reference variable)에 [ ]를 붙여 배열을 선언하여 나타내고 
+[ ] 안에 index의 값( 0 ~ n )에 따른 할당된 공간을 element라 부르며 해당 reference variable의 이름을 따서 variable[0] ~ variable[n]으로 나타낸다.
+
+배열의 타입은 같고 연속성을 가진다.
+
+🍘 배열의 선언과 생성
+
+🍘 배열의 선언
+: 배열을 다루기 위한 참조변수(reference variable)의 선언이다.
+
+타입[ ] 변수이름;
+타입 변수이름[ ]
+
+로 2가지 방법이 있으며, 전자가 Java에서 주로 권하는 방법이며 후자는 C언어에서 쓰이는 방법이다.
+
+
+🍘 배열의 생성
+: 실제 저장공간을 할당받아 생성한다.
+
+변수이름 = new 타입[길이]
+
+로 작성한다.
+
+: 위의 방법과 달리 선언과 생성을 동시에 할 수 있다.
+
+타입[ ] 변수이름 = new 타입[길이] 로 작성하면 된다.
+
+🍘 배열의 index
+
+: 각 element에 자동으로 붙는 번호이며, index의 범위는 0부터 '배열길이-1'까지이다. 할당된 공간을 배열의 요소(element)라 한다.
+
+변수이름[0] ... 변수이름[n] 와 같이 [ ]안에 index를 나타내 element를 가리킬 수 있다.
 
 ---
