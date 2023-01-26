@@ -1,12 +1,17 @@
+import java.util.Arrays; // ctrl+shift+o : import를 자동으로 추가하고자 할 때 쓰는 단축키
+
 /**
  * 
  * @author manjuSnack
  * 🍘 #ch5-1~3, 배열의 생성과 선언, 배열의 인덱스
+ * 🍘 #ch5-4~5, 배열의 길이, 배열의 초기화
+ * 🍘 #ch5-6~7, 배열의 출력
  */
 
 public class Ex5_1_tmp {
 
 	public static void main(String[] args) {
+//		🍘 #ch5-1~3, 배열의 생성과 선언, 배열의 인덱스
 //		int[] score; 		 // 1. 배열 score를 선언(참조변수(reference variable))
 //		score = new int [5]; // 2. 배열의 생성(int Type으로 저장공간을 5개 할당)
 		
@@ -30,6 +35,22 @@ public class Ex5_1_tmp {
 			score[i] = i * 10;
 			System.out.println("score["+i+"]="+ score[i]);
 		}
+		
+//		🍘 #ch5-4~5, 배열의 길이, 배열의 초기화
+//		index의 범위 : 0~8
+		int[] arr = new int[9];
+		System.out.println("arr.length="+arr.length);
+		
+		for (int i=0; i<arr.length;i++) // 조건식을 .length를 쓰지 않는다면 arr배열의 할당된 저장공간을 수정할 시 에러가 발생
+			System.out.println("arr[" + i + "]=" + arr[i]);
+		
+//		🍘 #ch5-6~7, 배열의 출력
+		int[] iArr = {100,95,80,70,60}; 
+		System.out.println(iArr); // [I@1eb44e46 에서 [ 는 배열을 나타내고, I는 int Type을, @뒤에 숫자는 주소를 나타낸다. 9장에 설명이 되어 있다.
+		
+		for(int i=0; i<iArr.length;i++) System.out.println(iArr[i]); // 배열을 출력하는 방법
+		
+		System.out.println(Arrays.toString(iArr)); // Arrays.toString(배열이름)으로 배열을 쉽게 출력할 수 있다.
 	} // main
 
 }
