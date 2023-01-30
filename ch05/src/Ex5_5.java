@@ -25,6 +25,6 @@ public class Ex5_5 {
 			ball[j] = tmp;
 		} // for
 		
-		for (int i=0; i< 6; i++) System.out.printf("ball[%d]=%d%n", i, ball[i]);
+		for (int i=0; i< 6; i++) System.out.printf("ball[%d]=%d%n", i+1, ball[i]);
 	} // main
 }

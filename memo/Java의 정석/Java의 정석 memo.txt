@@ -1406,7 +1406,7 @@ Arrays.toString(배열이름)
 
 ---
 
-🍘 #ch5-8~9, 배열의 활용 (1) ~ (4)
+🍘 #ch5-8~11, 배열의 활용 (1) ~ (4)
 
 Ex5_2.java
 Ex5_3.java
@@ -1426,5 +1426,130 @@ Ex5_5.java
 
 로또 번호 만들기
 : 1~45개 공을 생성, 초기화한 후 섞을 때 쓰일 임시변수, 난수로 쓰일 변수를 갖고 for문을 통해 6번 섞고 난 뒤 index가 0~5인 로또배열을 순서대로 출력
+
+---
+
+🍘 #ch5-12~13, String 배열
+
+Ex5_6.java
+Ex5_6_tmp.java
+
+🍘 String배열의 선언과 생성
+
+String[ ] 배열이름 = new String[할당될 공간의 수];
+
+: String은 기본적으로 타입이 참조형인 Class이다.
+
+🍘 String배열의 초기화
+
+String[ ] 배열이름 = new String[ ] { "값1", "값2", ... };
+
+String[ ] 배열이름 = { "값1", "값2", ... };
+
+: new String[ ]은 생략할 수 있다.
+
+
+변수[index 번호] = "값";
+
+: String Class에서만 위와 같이 "값"으로 객체를 저장할 수 있지만, 원래는 아래처럼 new 연산자를 통해 객체를 생성하여야 한다.
+
+변수[index 번호] = new String("값");
+
+으로 객체를 생성해 값을 초기화하여야 한다.
+
+
+: 실제로 배열에 값을 저장하는 것이 아닌 참조할 주소만을 저장하는 것이고 값은 이 참조할 주소( 0x100 같은 Memory 주소 ) 안에 저장된다.
+
+
+🍘 변수의 타입에 따른 기본값
+
+: default값은 참조형은 null이고 나머지는 0 혹은 false를 갖는다.
+
+boolean
+: false
+
+char
+: '\u0000'
+
+byte, short, int
+: 0
+
+long
+: 0L
+
+float
+: 0.0f
+
+double
+: 0.0d 또는 0.0
+
+참조형
+: null
+
+---
+
+🍘 #ch5-14~15, String 클래스
+
+ch5_6_tmp2.java
+
+🍘 String Class
+
+: String Class는 char 배열과 method( 기능, function과 뜻이 일맥상통 )를 결합한 것
+
+객체지향언어(OOL, Object oriented language)에서는 데이터와 그에 관련된 기능을 하나의 Class에 묶어서 다룰 수 있게 한다.
+여기서 데이터는 기본형(primitive type), 참조형(reference type)을 가리키고 기능은 함수(function)를 뜻하며 OOL에서는 Method라고 부른다.
+
+🍘 String Class는 내용을 변경할 수 없다. ( read only )
+
+: 새로운 값을 기존 reference에 저장할 경우에는 새로운 reference를 생성해 기존에 참조했던 주소가 아닌 새로운 주소를 가리키게 된다. 
+따라서 내용을 변경하는 것 같지만 새로운 값을 참조할 주소를 새로 받는 것이다.  이 내용은 '9장, java.lang 패키지와 유용한 클래스'를 참고
+
+🍘 String Class의 주요 Method( )
+
+char charAt(int index)
+: 문자열에서 해당 위치(index)에 있는 문자를 반환. 배열에서 '배열이름[index]'로 값을 가져오는 것과 같다.
+
+int length( )
+: 문자열의 길이를 반환
+
+String substring(int from, int to)
+: 문자열에서 해당 범위(from ~ to)의 문자열을 반환하며 마지막 to에 대한 범위는 포함되지 않는다.
+마지막 to의 범위를 생략할 경우 from부터 문자열 끝까지 반환하며, 이는 '배열.length'로 준 것과 같다.
+
+boolean equals(Object obj)
+: 문자열의 내용이 같은지 확인한다. 같으면 결과는 true, 다르면 false이다. 또한 대소문자를 구분한다.
+
+boolean equalsIgnoreCase( )
+: equals( )와는 다르게 대소문자를 구분하지 않고 문자열의 내용이 같은지 확인한다.
+
+char[ ] toCharArray( )
+: 문자열(String)을 문자배열(Char [ ])로 변환해서 반환한다. 
+
+---
+
+🍘 #ch5-16~17, Command line 입력받기
+
+Ex5_7.java
+
+🍘 cmd에서 입력받기
+
+: cmd에서 입력한 값(Argument)이 문자열 배열에 담겨서 전달된다. 
+
+Eclipse -> Alt + Enter 에서 나온 경로에서 src가 아닌 bin에는 *.class 파일들이 모여 있다. cmd에서 이 경로로 가서 java Ex5_7 문자열1 문자열2 "문자열3 문자열4" 와 같이 Argument와 같이 실행하면 된다.
+
+class 파일명 뒤에 Argument(인수)는 공백으로 구분하며 " "로 사이에 공백은 구분되지 않고 문자열 배열에 담겨져 전달된다.
+
+만약, cmd의 type 명령으로 .class 파일 내용을 보고 싶다면 .java가 있는 src 경로로 이동하여 볼 수 있다.
+
+
+🍘 Eclipse에서 입력받기
+
+: Eclipse에서는 Run -> Run Configurations -> Arguments에서 값을 넣어 main( )로 보낼 수 있다.
+
+공백으로 Argument(인수)를 구분하며 " "로 작성된 값에 공백은 구분되지 않고 문자열 배열에 담겨져 전달된다.
+
+🍘 매개변수(parameter)의 개수
+
+: ""와 같은 빈 문자열(argument)을 받을 때에는 배열의 개수가 0이 된다. Java에서는 배열의 개수가 없는 경우 0으로 나타난다.
 
 ---
