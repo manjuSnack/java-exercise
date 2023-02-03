@@ -1,0 +1,74 @@
+---
+
+Java 200제
+
+학습한 내용을 메모
+
+---
+
+🍘 #001 자바 설치하기, 🍘 #002 이클립스 설치하기
+
+: Java의 정석 참고
+
+🍘 환경설정(고급)
+
+JAVA_HOME : JDK 설치 경로
+
+PATH : %JAVA_HOME%\bin
+
+---
+
+🍘 #003 SceneBuilder 및 이클립스 플러그인 설치하기
+
+🍘 SceneBuilder 설치하기
+
+: 원하는 경로에 설치. 
+
+--🍘 e(fx)clipse가 Install된 후 SceneBuilder와 연동
+
+Windwo -- Preferences -- JavaFX -- Browse -- SceneBuilder.exe가 설치된 경로 찾아 OK
+
+🍘 e(fx)clipse 플러그인 설치하기
+
+Help -- Eclipse MarketPlace -- Find -- javafx -- e(fx)clipse Install
+
+: e(fx)clipse 3.8.0으로 설치
+
+🍘 e(fx)clipse를 이용하여 JavaFX 프로젝트 만들기
+
+File -- New -- Other -- JavaFx -- JavaFx Project -- Project명 작성 / Next -- 아래 내용을 참고 후 Finish
+
+Application type
+: Desktop 혹 Mobile 선택
+
+Package Name
+: 패키지명을 입력
+
+Language
+: FXML 등 이용
+
+Root-Type
+: 기본 값은 BorderPane, 나중에 변경이 가능하다
+
+File Name
+: FXML의 이름을 입력
+
+Controller Name
+: 화면과 이벤트 및 로직을 연결할 클래스 이름을 입력한다.
+
+만약, 에러가 발생 시 SDK에 대한 Libraries를 추가하여야 한다.
+
+---
+
+🍭 JavaFx 설치 후 Error
+
+--🍭 SDK 19 Install
+: JavaFx SDK Download 한 뒤, 압축을 푼 후 Preferences -- Java -- Build Path -- User Libraries -- javafx 생성 / Add External JARs.. -- sdk가 설치된 경로/lib/*.jar 추가 -- 확인
+
+--🍭 Project에 Libraries 추가
+
+Project 에서 Context Menu -- Build Path -- Add Libraries -- User Library -- 만들어 놓은 javafx 체크
+
+🍭 추가할 *.jar 목록
+
+javafx.base / javafx.control / javafx.fxml / javafx.graphics / javafx.media / javafx.swing / javafx.web / javafx-swt
