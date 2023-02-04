@@ -1,0 +1,297 @@
+---
+
+Java의 정석(기초편)
+
+에러, 생소한 내용 기술.
+
+---
+
+🍘 #ch1-5~6 자바 개발도구(JDK, Java Development Kit) 설치하기, 설정하기
+
+🍘 Java Eclipse 설치
+: JDK 11과 eclipse를 받는다. 실제로는 압축하여 USB 등에 옮겨 작업한다.
+
+🍘 환경 변수 설정
+시스템 환경 변수-시스템 변수-Path-jdk경로\bin-확인
+: 환경 변수를 맨 위로 올려야 Database 작업 시 충돌 방지.
+
+아래 JAVA_HOME을 먼저 설정한 후 PATH에는 %JAVA_HOME%\bin으로 작성하여도 된다.
+
+시스템 환경 변수-시스템 변수-새로 만들기-JAVA_HOME,
+: Tomcat이 JDK가 어디에 있는지 확인하기 위한 변수
+
+Java Install 확인
+: cmd ( Command Dos )에서 javac -version으로 java가 잘 설치되었는지 확인할 수 있다. 
+
+만약, Java version과 Java(TM) SE Runtime Environment version이 상이한 경우에는 cmd에서 javac, java 명령어가 작동되지 않는다.
+
+🍘 Java Spring 
+Tomcat Install 확인 ( Command Line에서 )
+: d: , cd D:\Coding\java\apache-tomcat-9.0.70\bin, startup으로 Tomcat이 잘 설치되었는지 확인할 수 있다.
+맨 밑에 startup.Catalina.start ... 가 보이면 브라우저에서 localhost:8080을 가면 Tomcat에 대한 정보가 나온다.
+
+: startup은 Server 열기, shutdown은 Server 닫기
+
+STS도 압축만 풀고 내부에 STS를 실행시키면 된다.
+: 만약에 실행과정 화면이 정상적으로 보이지 않으면 환경변수에 문제가 있다.
+
+----
+
+🍘 #ch1-7 자바 API( Application Programing Interface )
+
+: Package 목록, Class 목록으로 All Class에 대한 내용을 참고할 수 있다.
+
+Java API
+: https://www.oracle.com/kr/java/technologies/javase-jdk8-doc-downloads.html 에서 다운로드 받는다.
+
+: 경로\jdk-docs-all\docs\api에서 index.html로 Java API에 대한 내용을 알아볼 수 있다.
+
+INDEX
+: Java Class에서 method의 이름만 알고 있을 때 검색해 볼 수 있다.
+
+----
+
+🍘 #ch1-8~9 자바 첫 프로그램 작성하기, 자바 프로그램의 실행과정
+
+work 폴더 생성
+: 경로\jdk11\에서 work 폴더 생성해 둔다. 이곳에 .java 파일을 저장하는데 꼭 첫 문자는 대문자로 작성한다.
+
+.java 확장자 보이게 하기
+: 탐색기 / 파일 / 폴더옵션 / 보기 에서 '알려진 파일 형식의 파일 확장명 숨기기' 해제하고 '모든 폴더에 적용'
+
+🍘 Compile ( javac.exe )
+
+*.java 를 *.class로 기계어로 변환하는 일을 한다.
+
+D:\Coding\java\jdk11\work 경로에서 
+: javac 클래스명.java
+
+.java 실행하기
+D:\Coding\java\jdk11\work 경로에서 
+: java 클래스명로 실행한다.
+
+🍘 type Hello.class와 type Hello.java의 차이
+ 
+: Command Line에서 type Hello.class으로 는 Compile된 기계라 읽기가 어렵지만 type Hello.java는 Code가 적힌 내용을 출력한다.
+
+----
+
+🍘 #ch1-10~12 Eclipse 설치하기, Eclipse로 Java 프로그램 개발하기, Eclipse의 View, Perspective, Workspace
+
+🍘 Download할 Eclipse 종류.
+
+Eclipse IDE for Java EE Developers
+: Web Application을 만들 때 사용. 현재 이것으로 설치했다.
+
+Eclipse IDE for Java Developers
+: 기본적인 Java 기능만을 제공
+
+Eclipse for Android Developes
+: Android Studio를 대신 사용한다.
+
+🍘 Eclipse 내부의 View, Perspective, Workspace
+
+하나의 창을 View라 부르고, 구성 화면 전체를 Perspective(관점)라고 부른다.
+
+Workspace
+: Eclipse에서 작성한 파일이 저장되는 공간을 Workspace라고 한다. Eclipse가 처음 열릴 때 확인해 볼 수 있다.
+
+🍘 Build 관련 메뉴 설명
+
+: 소스파일(*.java)로부터 프로그램을 만들어 내는 전 과정
+
+Project -- Build All
+
+: Workspace의 모든 프로젝트를 빌드
+
+Project -- Build Project
+
+: 현재 Project를 Build ( 수동으로 .java를 .class 파일로 Compile 한다. )
+
+Project -- Clean
+
+: 이전 Build의 정보를 모두 삭제 ( 모든 소스 파일을 새로 Compile한다. )
+
+Project -- Build Automatical
+
+: .java File을 변경하고 매 저장할 때마다 .class를 알아서 생성해준다.
+
+🍘 Navigator
+
+탐색기와 같다. Compile 후 *.class를 확인할 수 있다.
+
+Windows -- Show View -- Navigator
+
+----
+
+🍘 ch1-13~16장, Eclipse의 단축키, Eclipse의 자동완성 기능, Eclipse의 주석(Comment), 자주 발생하는 에러와 해결방법
+
+🍘 Ex1_1 참고
+
+ctrl+shift+L : 단축키 전체 목록보기
+ctrl+ '+, -' : Font 크기 증가/감소
+ctrl+D : 한줄 삭제
+ctrl+alt+down : 행단위 복사
+
+🍘 단축키 재설정 방법
+: Windows -- Preferences -- General -- Appearance -- Keys-copy line 검색(행단위 복사일 경우) -- Binding 에서 단축키 설정 -- Apply and Close
+
+alt+shift+A : 멀티컬럼 편집(토글:같은 단축키로 On, Off)
+alt+up, down : 선택한 행단위 이동
+tab : 들여쓰기
+shift+tab : 내어쓰기
+ctrl+i : 들여쓰기, 내어쓰기 자동맞춤
+ctrl+/ : 주석(토글) 
+ctrl+space : 자동완성
+
+🍘 자동완성 재설정 방법
+Windows -- Preferences -- Java -- Editor -- Templates -- sysout(바꾸고 싶은 자동완성 이름 찾아 선택) -- Edit -- Name 변경(sysout를 sop로 바꿈) -- Rename -- Apply Close
+
+🍘 자동완성 확장 방법
+Windows -- Preferences -- Java -- Editor -- Content Assist -- Auto Activation treggers for Java에서 . 를 .abcdefghijklmnopqrstuvwxyz로 바꾸고 저장
+
+----
+
+🍘 #ch01-17~19장 책의 소스와 강의자료 다운로드, Eclipse 소스파일 가져오기, 내보내기
+
+🍘 소스파일 불러오기
+Eclipse 좌측 View에 Package Workspace에서 빈공간 우클릭 import-General-Existing Projects into Workspace-Select root directory로 Directory 찾기, Copy projects into workspace 체크(복사본으로 불러오기)
+
+🍘 소스파일 내보내기
+Eclipse 좌측 View에 Package Workspace에서 빈공간 우클릭 export-General-Archive file-Export할 Project 선택, to archive file 경로 선택 
+
+---
+
+
+
+---
+
+🍘 생소한 Method()
+
+print()
+
+println()
+
+printf()
+: ch2-12~13
+
+if()
+
+if-else()
+
+switch()
+
+for()
+
+while()
+: ch4-16~19
+
+do-while()
+: ch4-16~19
+
+break;
+: ch4-20~24
+
+continue;
+: ch4-20~24
+
+name : for 또는 while
+: ch4-20~24, 이름붙은 반복문으로 break name; 혹은 continue name;으로 둘 이상의 for문, while문, do-while문을 벗어날 수 있다.
+
+Interger.toBinaryString(숫자) : Integer.toBinaryString()는 값을 2진수로 출력
+
+Integer.parseInt(문자열) : 문자열을 정수로 변환
+
+Double.parseDouble(문자열) : 문자열을 실수로 변환
+
+charAt(0) : 문자열을 문자로 바꿀 수 있다. 예를 들면  변수 Literal.charAt(0) 혹은 "3".charAt(0)으로 '3'으로 바꿀 수 있다.
+
+변수.equals("문자열") : 대소문자 구분하며 변수와 문자열이 같은지 비교한다.
+
+변수.equalsIgnoreCase("문자열") : 대소문자 구분하지 않으며 변수와 문자열을 같은지 비교한다. 
+
+🍘 Math Class
+
+Math.random() : 난수를 만들어 낸다. 이때 난수는 실수이다.
+
+Math.round() : 실수의 소수점 첫째자리에서 반올림하여 정수로 표현한다.
+
+Math.sqrt(변수)
+: 제곱근(√ : root)을 나타낸다.
+
+Math.log(변수)
+: 지수함수의 역함수 ( log ), 예를 들어, 3^4 = 81일때, 이때 4가 log이다.
+
+🍘 Arrays Class -- 배열의 출력, 비교, 복사, 정렬
+
+Arrays.toString(배열)
+: 1차원 배열의 모든 요소를 문자열로 변환
+
+Arrays.deepToString(다차원배열)
+: 2차원, 다차원 배열의 모든 요소를 문자열로 변환
+
+Arrays.equals( 배열1, 배열2 )
+: 1차원 배열1과 배열2의 모든 요소를 비교
+
+Arrays.deepEquals( 배열1, 배열2 )
+: 2차원, 다차원 배열1과 배열2의 모든 요소를 비교
+
+타입[ ] 새 배열 = Arrays.copyOf( 복사할 배열, 복사할 배열.length )
+: 복사할 배열의 전체 혹 복사할 요소의 갯수만큼 복사해서 새로운 배열에 반환
+
+타입[ ] 새 배열 = Arrays.copyOfRange( 복사할 배열, from, to )
+: 복사할 배열을 from ~ to만큼의 범위( index )로 복사해서 새로운 배열에 반환. 단, to의 값-1 만큼만 출력한다.
+
+Arrays.sort( 배열 )
+: 배열 내 요소를 오름차순으로 정렬한다.
+
+🍘 String Class
+
+charAt(int index)
+: 문자열에서 해당 위치(index)에 있는 문자를 반환. 배열에서 '배열이름[index]'로 값을 가져오는 것과 같다.
+
+length( )
+: 문자열의 길이를 반환
+
+substring(int from, int to)
+: 문자열에서 해당 범위(from ~ to)의 문자열을 반환하며 마지막 to에 대한 범위는 포함되지 않는다.
+
+equals(Object obj)
+: 문자열의 내용이 같은지 확인한다. 같으면 결과는 true, 다르면 false이다. 또한 대소문자를 구분한다.
+
+equalsIgnoreCase( )
+: equals( )와는 다르게 대소문자를 구분하지 않고 문자열의 내용이 같은지 확인한다.
+
+toCharArray( )
+: 문자열(String)을 문자배열(Char [ ])로 변환해서 반환한다. 
+
+🍘 Scanner Class
+
+.nextInt() : 정수를 입력
+.nextfloat() : 실수를 입력
+.nextLine() : 행단위로 문자열을 입력
+
+---
+
+🍭 cmd에서 한글 깨질 경우
+
+chcp ( Changes the active console code page )
+
+chcp 949를 chcp 65001( UTF-8 )로 바꾼다.
+
+> chcp 65001
+
+
+🍭 *.class의 JDK Version과 JVM Version이 다를 때
+
+java.lang.unsupportedclassversionerror: ~ 와 같은 에러가 발생할 경우, Windows -> Preferences -> Java -> Compiler -> Compiler compliance leve: 를 바꾸거나
+
+고급 환경설정에서 JAVA_HOME과 PATH의 내용(경로)를 작성한 *.class의 JDK Version에 맞게 JDK를 설치해 변경한다. 
+
+
+🍭 Eclipse Setting-@author change
+
+eclipse.ini
+: -Duser.name=manjuSnack 추가 혹은 Eclipse에서 Window / Preferences / Java / Code Style / Code Templates / Comments / Types에서
+
+@author ${user}를 @author manjuSnack으로 수정

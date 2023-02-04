@@ -1,0 +1,49 @@
+---
+
+Java 200제
+
+에러, 생소한 내용을 메모
+
+---
+
+🍭 #001 자바 설치하기, 🍭 #002 이클립스 설치하기
+
+: Java의 정석 참고
+
+🍭 환경설정(고급)
+
+JAVA_HOME : JDK 설치 경로
+
+PATH : %JAVA_HOME%\bin
+
+---
+
+🍭 #003 SceneBuilder 및 이클립스 플러그인 설치하기
+
+JavaFX 프로젝트에서 에러가 발생 시 SDK에 대한 Libraries를 추가하여야 한다.
+
+---
+
+🍭 JavaFx 설치 후 Error
+
+--🍭 SDK 19 Install
+: JavaFx SDK Download 한 뒤, 압축을 푼 후 Preferences -- Java -- Build Path -- User Libraries -- javafx 생성 / Add External JARs.. -- sdk가 설치된 경로/lib/*.jar 추가 -- 확인
+
+--🍭 Project에 Libraries 추가
+
+Project 에서 Context Menu -- Build Path -- Add Libraries -- User Library -- 만들어 놓은 javafx 체크
+
+--🍭 추가할 *.jar 목록
+
+javafx.base / javafx.control / javafx.fxml / javafx.graphics / javafx.media / javafx.swing / javafx.web / javafx-swt
+
+--🍭 VM Arguments 추가
+
+Run -- Run configurations -- Arguments에 아래와 같이 작성
+
+--module-path "<설치한 SDK의 .jar가 있는 lib 경로> --add-modules javafx.fxml, javafx.controls
+
+
+🍭 Object Aid Plugin Install Error
+
+현재, Eclipse에선 지원하지 않고 있다.
