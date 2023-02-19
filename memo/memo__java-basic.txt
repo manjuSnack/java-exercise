@@ -2,16 +2,16 @@
 
 Java의 정석(기초편)
 
-에러, 생소한 내용 기술.
+설치와 설정, 에러, 생소한 내용 기술.
 
 ---
 
-🍘 #ch1-5~6 자바 개발도구(JDK, Java Development Kit) 설치하기, 설정하기
+🍭 #ch1-5~6 자바 개발도구(JDK, Java Development Kit) 설치하기, 설정하기
 
-🍘 Java Eclipse 설치
+🍭 Java Eclipse 설치
 : JDK 11과 eclipse를 받는다. 실제로는 압축하여 USB 등에 옮겨 작업한다.
 
-🍘 환경 변수 설정
+🍭 환경 변수 설정
 시스템 환경 변수-시스템 변수-Path-jdk경로\bin-확인
 : 환경 변수를 맨 위로 올려야 Database 작업 시 충돌 방지.
 
@@ -25,7 +25,7 @@ Java Install 확인
 
 만약, Java version과 Java(TM) SE Runtime Environment version이 상이한 경우에는 cmd에서 javac, java 명령어가 작동되지 않는다.
 
-🍘 Java Spring 
+🍭 Java Spring 
 Tomcat Install 확인 ( Command Line에서 )
 : d: , cd D:\Coding\java\apache-tomcat-9.0.70\bin, startup으로 Tomcat이 잘 설치되었는지 확인할 수 있다.
 맨 밑에 startup.Catalina.start ... 가 보이면 브라우저에서 localhost:8080을 가면 Tomcat에 대한 정보가 나온다.
@@ -37,7 +37,7 @@ STS도 압축만 풀고 내부에 STS를 실행시키면 된다.
 
 ----
 
-🍘 #ch1-7 자바 API( Application Programing Interface )
+🍭 #ch1-7 자바 API( Application Programing Interface )
 
 : Package 목록, Class 목록으로 All Class에 대한 내용을 참고할 수 있다.
 
@@ -51,7 +51,7 @@ INDEX
 
 ----
 
-🍘 #ch1-8~9 자바 첫 프로그램 작성하기, 자바 프로그램의 실행과정
+🍭 #ch1-8~9 자바 첫 프로그램 작성하기, 자바 프로그램의 실행과정
 
 work 폴더 생성
 : 경로\jdk11\에서 work 폴더 생성해 둔다. 이곳에 .java 파일을 저장하는데 꼭 첫 문자는 대문자로 작성한다.
@@ -59,7 +59,7 @@ work 폴더 생성
 .java 확장자 보이게 하기
 : 탐색기 / 파일 / 폴더옵션 / 보기 에서 '알려진 파일 형식의 파일 확장명 숨기기' 해제하고 '모든 폴더에 적용'
 
-🍘 Compile ( javac.exe )
+🍭 Compile ( javac.exe )
 
 *.java 를 *.class로 기계어로 변환하는 일을 한다.
 
@@ -70,15 +70,15 @@ D:\Coding\java\jdk11\work 경로에서
 D:\Coding\java\jdk11\work 경로에서 
 : java 클래스명로 실행한다.
 
-🍘 type Hello.class와 type Hello.java의 차이
+🍭 type Hello.class와 type Hello.java의 차이
  
 : Command Line에서 type Hello.class으로 는 Compile된 기계라 읽기가 어렵지만 type Hello.java는 Code가 적힌 내용을 출력한다.
 
 ----
 
-🍘 #ch1-10~12 Eclipse 설치하기, Eclipse로 Java 프로그램 개발하기, Eclipse의 View, Perspective, Workspace
+🍭 #ch1-10~12 Eclipse 설치하기, Eclipse로 Java 프로그램 개발하기, Eclipse의 View, Perspective, Workspace
 
-🍘 Download할 Eclipse 종류.
+🍭 Download할 Eclipse 종류.
 
 Eclipse IDE for Java EE Developers
 : Web Application을 만들 때 사용. 현재 이것으로 설치했다.
@@ -89,14 +89,14 @@ Eclipse IDE for Java Developers
 Eclipse for Android Developes
 : Android Studio를 대신 사용한다.
 
-🍘 Eclipse 내부의 View, Perspective, Workspace
+🍭 Eclipse 내부의 View, Perspective, Workspace
 
 하나의 창을 View라 부르고, 구성 화면 전체를 Perspective(관점)라고 부른다.
 
 Workspace
 : Eclipse에서 작성한 파일이 저장되는 공간을 Workspace라고 한다. Eclipse가 처음 열릴 때 확인해 볼 수 있다.
 
-🍘 Build 관련 메뉴 설명
+🍭 Build 관련 메뉴 설명
 
 : 소스파일(*.java)로부터 프로그램을 만들어 내는 전 과정
 
@@ -116,7 +116,7 @@ Project -- Build Automatical
 
 : .java File을 변경하고 매 저장할 때마다 .class를 알아서 생성해준다.
 
-🍘 Navigator
+🍭 Navigator
 
 탐색기와 같다. Compile 후 *.class를 확인할 수 있다.
 
@@ -124,17 +124,14 @@ Windows -- Show View -- Navigator
 
 ----
 
-🍘 ch1-13~16장, Eclipse의 단축키, Eclipse의 자동완성 기능, Eclipse의 주석(Comment), 자주 발생하는 에러와 해결방법
+🍭 ch1-13~16장, Eclipse의 단축키, Eclipse의 자동완성 기능, Eclipse의 주석(Comment), 자주 발생하는 에러와 해결방법
 
-🍘 Ex1_1 참고
+🍭 Ex1_1 참고
 
 ctrl+shift+L : 단축키 전체 목록보기
 ctrl+ '+, -' : Font 크기 증가/감소
 ctrl+D : 한줄 삭제
 ctrl+alt+down : 행단위 복사
-
-🍘 단축키 재설정 방법
-: Windows -- Preferences -- General -- Appearance -- Keys-copy line 검색(행단위 복사일 경우) -- Binding 에서 단축키 설정 -- Apply and Close
 
 alt+shift+A : 멀티컬럼 편집(토글:같은 단축키로 On, Off)
 alt+up, down : 선택한 행단위 이동
@@ -144,36 +141,58 @@ ctrl+i : 들여쓰기, 내어쓰기 자동맞춤
 ctrl+/ : 주석(토글) 
 ctrl+space : 자동완성
 
-🍘 자동완성 재설정 방법
+🍭 단축키 재설정 방법
+: Windows -- Preferences -- General -- Appearance -- Keys-copy line 검색(행단위 복사일 경우) -- Binding 에서 단축키 설정 -- Apply and Close
+
+🍭 자동완성 재설정 방법
 Windows -- Preferences -- Java -- Editor -- Templates -- sysout(바꾸고 싶은 자동완성 이름 찾아 선택) -- Edit -- Name 변경(sysout를 sop로 바꿈) -- Rename -- Apply Close
 
-🍘 자동완성 확장 방법
+🍭 자동완성 확장 방법
 Windows -- Preferences -- Java -- Editor -- Content Assist -- Auto Activation treggers for Java에서 . 를 .abcdefghijklmnopqrstuvwxyz로 바꾸고 저장
 
 ----
 
-🍘 #ch01-17~19장 책의 소스와 강의자료 다운로드, Eclipse 소스파일 가져오기, 내보내기
+-- 🍭 #ch01-17~19장 책의 소스와 강의자료 다운로드, Eclipse 소스파일 가져오기, 내보내기
 
-🍘 소스파일 불러오기
+🍭 소스파일 불러오기
 Eclipse 좌측 View에 Package Workspace에서 빈공간 우클릭 import-General-Existing Projects into Workspace-Select root directory로 Directory 찾기, Copy projects into workspace 체크(복사본으로 불러오기)
 
-🍘 소스파일 내보내기
+🍭 소스파일 내보내기
 Eclipse 좌측 View에 Package Workspace에서 빈공간 우클릭 export-General-Archive file-Export할 Project 선택, to archive file 경로 선택 
 
 ---
 
+--🍭 #ch7-12~14 패키지( package ), 패키지의 선언, 클래스 패스( Classpath )
 
+rt.jar
+: runtime.jar로 runtime이라는 말 그대로 실행을 담당하는 클래스를 묶어놓은 압축파일. 
+Java 9부터는 rt.jar이 아닌 module 개념을 도입하여 사용한다.
+
+🍭 .java 파일이 저장된 탐색기 경로 보기
+
+.java -- context menu -- Show in -- System Explorer
+
+🍭 Class 파일 찾아 실행하기
+
+cmd.exe에서 위의 .java 파일이 저장된 탐색기 경로에 \bin 경로가서 `java <package명.class명>`으로 실행시킬 수 있다.
+
+🍭 환경변수에 CLASSPATH를 등록하기
+
+: 시스템 속성 -- 환경변수 -- CLASSPATH와 경로를 입력하여 만든다. 혹은 cmd.exe에서 `set classpath`를 사용해서 추가한다.
+
+set classpath=<`\bin 경로`>;<추가하고 싶은 경로>
+
+참고로 ` ; `로 여러 경로를 같이 적어줄 수 있다.
 
 ---
 
-🍘 생소한 Method()
+--🍭 생소한 Method()
 
 print()
 
 println()
 
 printf()
-: ch2-12~13
 
 if()
 
@@ -184,19 +203,15 @@ switch()
 for()
 
 while()
-: ch4-16~19
 
 do-while()
-: ch4-16~19
 
 break;
-: ch4-20~24
 
 continue;
-: ch4-20~24
 
 name : for 또는 while
-: ch4-20~24, 이름붙은 반복문으로 break name; 혹은 continue name;으로 둘 이상의 for문, while문, do-while문을 벗어날 수 있다.
+: 이름붙은 반복문으로 break name; 혹은 continue name;으로 둘 이상의 for문, while문, do-while문을 벗어날 수 있다.
 
 Interger.toBinaryString(숫자) : Integer.toBinaryString()는 값을 2진수로 출력
 
@@ -210,7 +225,7 @@ charAt(0) : 문자열을 문자로 바꿀 수 있다. 예를 들면  변수 Lite
 
 변수.equalsIgnoreCase("문자열") : 대소문자 구분하지 않으며 변수와 문자열을 같은지 비교한다. 
 
-🍘 Math Class
+--🍭 Math Class
 
 Math.random() : 난수를 만들어 낸다. 이때 난수는 실수이다.
 
@@ -222,7 +237,7 @@ Math.sqrt(변수)
 Math.log(변수)
 : 지수함수의 역함수 ( log ), 예를 들어, 3^4 = 81일때, 이때 4가 log이다.
 
-🍘 Arrays Class -- 배열의 출력, 비교, 복사, 정렬
+--🍭 Arrays Class -- 배열의 출력, 비교, 복사, 정렬
 
 Arrays.toString(배열)
 : 1차원 배열의 모든 요소를 문자열로 변환
@@ -245,7 +260,7 @@ Arrays.deepEquals( 배열1, 배열2 )
 Arrays.sort( 배열 )
 : 배열 내 요소를 오름차순으로 정렬한다.
 
-🍘 String Class
+--🍭 String Class
 
 charAt(int index)
 : 문자열에서 해당 위치(index)에 있는 문자를 반환. 배열에서 '배열이름[index]'로 값을 가져오는 것과 같다.
@@ -265,7 +280,7 @@ equalsIgnoreCase( )
 toCharArray( )
 : 문자열(String)을 문자배열(Char [ ])로 변환해서 반환한다. 
 
-🍘 Scanner Class
+--🍭 Scanner Class
 
 .nextInt() : 정수를 입력
 .nextfloat() : 실수를 입력
@@ -284,7 +299,7 @@ chcp 949를 chcp 65001( UTF-8 )로 바꾼다.
 
 🍭 *.class의 JDK Version과 JVM Version이 다를 때
 
-java.lang.unsupportedclassversionerror: ~ 와 같은 에러가 발생할 경우, Windows -> Preferences -> Java -> Compiler -> Compiler compliance leve: 를 바꾸거나
+java.lang.unsupportedclassversionerror: ~ 와 같은 에러가 발생할 경우, Windows -> Preferences -> Java -> Compiler -> Compiler compliance level: 를 바꾸거나
 
 고급 환경설정에서 JAVA_HOME과 PATH의 내용(경로)를 작성한 *.class의 JDK Version에 맞게 JDK를 설치해 변경한다. 
 
@@ -295,3 +310,23 @@ eclipse.ini
 : -Duser.name=manjuSnack 추가 혹은 Eclipse에서 Window / Preferences / Java / Code Style / Code Templates / Comments / Types에서
 
 @author ${user}를 @author manjuSnack으로 수정
+
+---
+
+--🍭 Java의 정석 학습과정
+
+--🍭 2023. 02. 18 내용, 1일차
+
+- `Kokoa Clone 다시 만들기` 완성한 이후 Java의 정석 기초편 학습 내용 이후로 학습진행
+
+   : Chapter 6 객체지향언어부터 복습 후 이어 진행. 
+
+- 이전 학습 방법과 다른 방법으로 진행.
+   
+  : 동영상 강의 우선이 아닌 책 위주로 학습
+
+---
+
+--🍭 2023. 02. 19 내용, 2일차
+
+- 객체지향언어 / Chapter 6-22 호출스택(call stack) ~  Chapter 7-14 클래스 패스(classpath)  
