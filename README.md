@@ -15,8 +15,8 @@ Books : Java의 정식, 명품 Java Programing, Java 200제, Java 웹을 다루�
 - [x] 배열(Array)
 - [x] 객체지향언어 ⅰ
 - [x] 객체지향언어 ⅱ
-- [ ] 예외처리 -- 학습중
-- [ ] java.lang 패키지와 유용한 클래스
+- [x] 예외처리
+- [ ] java.lang 패키지와 유용한 클래스 -- 학습중
 - [ ] 날짜와 시간 & 형식화
 - [ ] 컬렉션 프레임웍
 - [ ] 쓰레드(thread)
@@ -61,3 +61,9 @@ Books : Java의 정식, 명품 Java Programing, Java 200제, Java 웹을 다루�
 --🍭 2023. 02. 21 내용, 4일차
 
 - 객체지향언어ⅱ / Chapter 7-33 추상클래스의 작성 ~ 예외처리 / Chapter 8-3 Exception과 RuntimeException
+
+---
+
+--🍭 2023. 02. 22 내용, 5일차
+
+- 예외처리 / Chapter 8-4 예외처리하기(try-catch문) ~ Chapter 8-19 연결된 예외
