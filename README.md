@@ -67,3 +67,9 @@ Books : Java의 정식, 명품 Java Programing, Java 200제, Java 웹을 다루�
 --🍭 2023. 02. 22 내용, 5일차
 
 - 예외처리 / Chapter 8-4 예외처리하기(try-catch문) ~ Chapter 8-19 연결된 예외
+
+---
+
+--🍭 2023. 02. 23 내용, 6일차
+
+- java.lang패키지와 유용한 클래스 / Chapter 9 ~ Chapter 9-13 문자열과 기본형 간의 변환

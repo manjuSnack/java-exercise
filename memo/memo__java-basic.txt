@@ -201,6 +201,7 @@ if-else()
 switch()
 
 for()
+: for ( ; ; )와 for ( ; true; )는 무한루프(infinite loop)이며 for ( 타입 참조변수 : 배열 )은 배열의 값을 하나씩 참조변수에 대입하는 뜻
 
 while()
 
@@ -288,6 +289,9 @@ toCharArray( )
 
 --🍭 메모 후 정리중
 
+생성자
+: 객체의 초기화
+
 this
 : 클래스 내 멤버변수를 참조
 
@@ -342,7 +346,8 @@ abstract
 --💬 추후 학습할 내용!
 
 native ( 본래의 )
-: JVM ( Java Virtual Machine ) 밖에서 C/C++ Code로 메소드를 정의할 때 쓰는 키워드
+: OS가 갖고 있는 메서드로 주로 C언어로 되어있고 이를 Java에서 호출하여 사용. JVM ( Java Virtual Machine ) 밖에서 C/C++ Code로 메소드를 정의할 때 쓰는 키워드
+JNI ( Java Native Interface )는 Java와 다른 언어와의 소통할 때 쓰인다. 
 
 transient ( 일시의 )
 : Object Stream을 만들 때 값을 전달하지 않도록 숨기는 키워드
@@ -427,8 +432,6 @@ ArrayList와 마찬가지로 배열의 길이를 동적으로 활용할 수 있�
 
 인터페이스( interface )
 : 오직 추상메서드와 상수만을 멤버로 가질 수 있는 추상화 정도가 높은 추상클래스, 접근제어자(access modifier)로 public 또는 default만을 사용한다. 
-
-쉽게 말해, "처음부터 계획이 있는 후루꾸 클래스"
 
 작성법
 : interface 인터페이스 이름 {
@@ -524,8 +527,6 @@ awt ( abstract window toolkit )
 논리적 에러(logical error)
 : 의도한 것과 다르게 동작하는 것
 
----
-
 Exception과 RuntimeException
 
 : Exception클래스는 사용자의 실수와 같은 외적인 요인의 의한 예외, RuntimeException클래스는 프로그래머의 실수로 발생하는 예외
@@ -533,7 +534,7 @@ Exception과 RuntimeException
 try-catch문
 
 : 예외처리(exception handling), 예외 발생 시 대비한 코드를 작성하며 비정상 종료를 막고 정상적인 실행상태를 유지한다.
-만약 JVM의 예외처리기(UncaughtExceptionHandler)가 처리되지 못한 예외(uncaught exception)가 있다면 받아서 그 원인을 화면에 출력한다.
+만약 JVM의 예외처리기(UncaughtExceptionHandler)가 처리되지 못한 예외(uncaught exception)가 있다면 이를 받아서 그 원인을 화면에 출력한다.
 
 try-catch문에서의 흐름
 : 예외가 없을 경우 catch문 수행은 생략되며 만약 예외 발생 시 일치하는 catch블럭을 확인과 수행, 일치하지 않은 예외가 있는 경우 비정상적인 종료가 발생한다.
@@ -561,7 +562,7 @@ getMessage( )
 
 checked 예외, unchecked 예외
 : Exception 클래스와 그 자손들(checked)은 예외처리(try-catch문)를 강제하며 compile 불가, 
-RuntimeException 클래스와 그 자손들(unchecked) 예외처리(try-catch문) 강제하지 않아 compile 가능하나 runtime 예외는 발생 
+RuntimeException 클래스와 그 자손들(unchecked)은 예외처리(try-catch문) 강제하지 않아 compile 가능하나 runtime 예외는 발생 
 
 메서드에 예외 선언하기
 : try-catch문 외에 "void 메서드이름( ) throws Exception1, Exception2, ... ExceptionN { "메서드 내용..." }"로도 작성. 예외의 개수와 상속관계까지 고려해 작성
@@ -593,6 +594,8 @@ Throwable getCause( )
 Throwable
 : Exception과 error의 조상 클래스. Throwable 위에 조상클래스는 Obejct 클래스가 있다.
 
+---
+
 --🌡 File Class
 
 new File( filename )
@@ -606,6 +609,235 @@ copyFiles( )
 
 deleteTempFile( )
 : 임시파일 삭제
+
+---
+
+java.lang 패키지
+: 가장 기본이 되는 클래스의 묶음으로 import문 없이도 사용할 수 있다. Object클래스, String클래스
+
+Object 클래스
+: 모든 클래스의 최고 조상 클래스
+
+protected Object clone( )
+: 객체 자신의 복사본을 반환한다. overriding하여 public으로 변경하여 사용
+
+public boolean equals( Object obj )
+: 객체 자신과 객체 obj가 같은지 주소 값을 비교. 대부분 iv ( instance value )의 주소 값을 갖고 비교한다. 
+주소 값이 아닌 인스턴스의 멤버변수 값을 비교하려면 equals 메서드를 overriding하여 비교한다.
+
+protected void finalize( )
+: 객체가 소멸될 때 garbage collector가 자동으로 호출, 이때 수행해야 할 것이 있다면 overriding하여 public으로 변경하여 사용. 
+메모리가 부족한 상태일 때 호출되므로 거의 사용하지 않는다. 
+
+public Class getClass( )
+: 객체 자신의 클래스 정보를 담고 있는 Class 인스턴스를 반환.
+
+*.java를 Compile하면 *.class가 생성되고 이를 실행시 Class 객체가 생성된다. 이때 객체가 Class 인스턴스.
+
+--🌡 public native int hashCode( ) or public int hashCode( )
+: 객체 자신의 해시코드를 반환. 해싱(hashing) 알고리즘 기법에 사용되는 해시함수(hash function)을 구현. 
+
+규칙 
+equals( )의 결과가 true인 두 객체의 해시코드가 같아야 하기 때문에, equals( )를 overriding 할 경우 hashCode( )도 overriding하여야 하는 규칙이 있다.
+이때 return Objects.hash(멤버변수1, 멤버변수2, ... )로 overriding하며 가변인자(Object..)라서 호출 시 지정하는 값의 개수가 정해져있지 않다.
+
+public static native int identityHashCode(Object x)
+: 객체의 주소값의 해시코드를 반환. 모든 객체에 대해 다른 해시코드가 보장
+
+--🌡 hashCode를 64bit JVM인 long 타입( 8 byte )에서 기존 32 bit JVM인 int 타입( 4 byte )으로 변환 시 중복된 값이 도출될 수 있다.
+
+public String toString( )
+: 객체 자신의 정보를 문자열로 반환
+
+retrun getClass( ).getName( )+"@"+Integer.toHexString(hashCode( ));가 작성되어 있어 "클래스이름@16진수의해시코드"인 문자열로 표현된다.
+toString( ) 메서드를 overrding하여 이를 문자열 표현을 변경해 반환하면 다른 문자열로 표현된다.
+
+public void notify( )
+: 객체 자신을 사용하려고 기다리는 쓰레드를 하나만 깨운다.
+
+public void notifyAll( )
+: 객체 자신을 사용하려고 기다리는 모든 쓰레드를 깨운다.
+
+public void wait( )
+public void wait( long timeout )
+public void wait( long timeout, int nanos )
+: 다른 쓰레드가 notify( )나 notifyAll( )을 호출할 때까지 무한히 또는 지정된 시간동안 기다리게 한다. timeout은 천 분의 1초, nanos는 10의 9승 분의 1초
+
+Reflection API
+: 객체를 생성하는데 쓰이는 API
+
+---
+
+String 클래스
+: 타 언어는 문자열을 char형의 배열로 다루지만 Java는 문자열로 제공한다. 불변(immutable) 클래스이다.
+
+public final class String implements java.io.Serializable, comparable { 
+    private char[ ] value;
+	...
+}
+
+클래스 이름 앞에 final이므로 다른 클래스의 조상이 될 수 없으며 문자열은 읽어 올 수 만 있다. 문자열을 결합, 추출할 경우에는 새로운 String 인스턴스가 생성된다.
+
+StringBuffer 클래스
+: 문자열 간의 결합, 추출 작업이 많을 경우 주로 쓰이며 저장된 문자열을 변경할 수 있다.
+
+문자열 생성
+: 직접 초기화하는 문자열 리터럴(literal)을 지정하는 방법, new연산자를 통해 String 클래스의 생성자를 사용하는 방법 두가지가 있다.
+
+문자열(String)의 비교
+: equals( )는 두 문자열의 내용을 비교하며 등가비교연산자 '=='는 String인스턴스의 주소를 비교하여 결과가 다르다.
+
+--🌡 문자열 리터럴(literal)은 이미 메모리할당이 이뤄진 것을 재사용하므로 등가비교연산자 '=='로도 true의 값을 얻을 수도 있다.
+
+문자열 리터럴(String리터럴)
+: 모든 문자열 리터럴은 Compile 시에 클래스 파일에 자동으로 생성되어 저장되며 같은 내용은 한번만 저장된다. 상수와 마찬가지로 constant pool에 저장된다.
+
+빈 문자열(empty string)
+: 길이가 0인 배열을 갖고 있는 문자열이 빈 문자열. 예시, String s ="";
+char 타입은 하나의 문자가 있어야 한다. Char c = ' ';
+
+---
+
+--🌡 String클래스의 생성자와 메서드 ( p.334 ~ p.336 참고 )
+
+String(String s)
+: 주어진 문자열 s를 갖는 String인스턴스 생성
+
+String(char[ ] value)
+: 주어진 배열의 문자를 결합한 문자열 value를 갖는 String인스턴스 생성
+
+String(StringBuffer buf)
+: StringBuffer인스턴스가 갖고 있는 문자열과 같은 String인스턴스 생성
+
+char charAt(int index)
+: 지정된 위치(index)에 문자를 알림
+
+int compareTo(String str)
+: 문자열 str과 사전순서로 비교. 같으면 0, 이전 사전순은 음수, 이후 사전순은 양수
+
+String concat(String str)
+: 문자열 str을 뒤에 붙인다
+
+boolean contains(CharSequence s)
+: 지정된 문자열 s가 포함되었는지 검사
+
+boolean startsWith(String prefix)
+: 주어진 문자열 prefix로 시작하는지 검사
+
+boolean endsWith(String suffix)
+: 지정된 문자열 suffix로 끝나는지 검사
+
+boolean equals(Object obj)
+: Object 클래스 내 설명 참고
+
+boolean equalsIgnoreCase(String str)
+: 문자열과 String인스턴스의 문자열을 대소문자 구분없이 비교
+
+int indexOf(int ch)
+: 주어진 문자 ch가 문자열에 존재할 경우 위치(index)를 알려준다. 못 찾으면 음수를 반환
+
+int indexOf(int ch, int pos)
+: 주어진 문자 ch가 문자열에 존재하는지 지정된 위치 pos부터 확인하여 위치(index)를 알려준다. 못 찾으면 음수를 반환
+
+int indexOf(String str)
+: 주어진 문자열 str이 문자열에 존재할 경우 그 위치(index)를 알려준다. 못 찾으면 음수를 반환
+
+String intern( )
+: 문자열을 상수풀(constant pool)에 등록, 이미 등록된 경우 주소값을 반환
+
+int lastIndexOf(int ch)
+: 지정된 문자 ch 또는 문자코드를 문자열 오른쪽 끝에서 찾아서 위치(index)를 알려준다. 못 찾으면 음수를 반환
+
+int lastIndexOf(String str)
+: 지정된 문자열 str을 인스턴스 문자열 끝에서 부터 찾아서 위치(index)를 알려준다. 못 찾으면 음수를 반환
+
+String replace(char old, char nw)
+: 문자열 중 문자 old를 새로운 문자 nw로 바꾼 문자열을 반환
+
+String replace(CharSequence old, CharSequence nw)
+: 문자열 중 문자열 old를 새로운 문자열 nw로 바꾼 문자열을 반환
+
+String replaceAll(String regex, String replacement)
+: 문자열 중에서 지정된 문자열 regex와 일치하는 것을 새로운 문자열 replacement로 모두 변경
+
+String replaceFirst(String regex, String replacement)
+: 문자열 중에서 지정된 문자열 regex와 일치하는 것 중 첫번째만을 새로운 문자열 replacement로 변경
+
+String[ ] split(String regex)
+: 문자열을 지정된 분리자 regex로 나누어 문자열 배열에 담아 반환
+
+String[ ] split(String regex, int limit)
+: 문자열을 지정된 분리자 regex로 나누어 문자열 배열에 담아 반환, 단 문자열 전체 중 지정된 수 limit만큼 자른다.
+
+String substring(int begin)
+String substring(int begin, int end)
+: 주어진 시작위치 begin부터 끝 위치 end범위에 포함된 문자열을 얻는다. 이때 끝 위치의 문자는 포함되지 않는다. ( begin <= x < end )
+
+String toLowerCase( )
+: String인스턴스에 저장된 모든 문자열을 소문자로 변환하여 반환
+
+String toString( )
+: Object 클래스 내 설명 참고
+
+String toUpperCase( )
+: String인스턴스에 저장된 모든 문자열을 대문자로 변환하여 반환
+
+String trim( )
+: 문자열의 왼쪽 끝과 오른쪽 끝에 공백을 없앤 결과를 반환
+
+static String valueOf(boolean b)
+static String valueOf(char c)
+static String valueOf(int i)
+static String valueOf(long l)
+static String valueOf(float f)
+static String valueOf(double d)
+static String valueOf(Object o)
+: 지정된 값을 문자열로 변환하여 반환, 참조변수의 경우 toString( )을 호출한 결과를 반환
+
+--🌡 추가 참고
+
+CharSequence
+: JDK1.4부터 추가된 인터페이스로 String, StringBuffer 등의 클래스가 구현
+
+: JDK1.5부터 contains(CharSequence s), replace(CharSequence old, CharSequence nw)가 추가
+
+java.util.Date dd = new java.util.Date( )
+: 생성된 인스턴스는 현재 시간을 갖는다.
+
+---
+
+join( )과 StringJoiner
+
+join( )
+: split( )와 반대로 여러 문자열 사이에 구분자를 넣어서 결합한다. JDK1.8부터 추가
+
+StringJoiner
+: 문자열 결합. 아래와 같다.
+
+public StringJoiner(CharSequence delimiter, CharSequence prefix, CharSequence suffix) 
+: 구분자, 접두사(prefix), 접미사(suffix)를 통해 문자열을 결합
+
+문자열과 기본형 간의 변환
+: 문자열을 숫자로, 숫자를 문자열로 변환
+
+방법 1
+: 빈 문자열 ""을 더해 숫자를 문자열로 바꿀 수 있다.
+
+방법 2
+: String.valueOf( 숫자로 된 참조변수 )로 숫자를 문자열로 바꿀 수 있다. 참조변수가 가리키는 인스턴스의 toString( )을 호출해 String을 얻고 결합한다. 
+
+--🌡 문자열 → 기본형
+
+Boolean.parseBoolean(String s)
+Byte.parseByte(String s)
+Short.parseShort(String s)
+Integer.parseInt(String s)
+Long.parseLong(String s)
+Float.parseFloat(String s)
+Double.parseDouble(String s)
+: 문자열을 기본형으로 변환. valueOf로도 기본형 → 문자열로, 문자열 → 기본형으로 바꿀 수 있다. valueOf는 Interger 타입이지만 오토박싱(auto-boxing)으로 자동으로 int로 변환된다.
+
+만약, byte, short를 문자열로 변환 시 String valueOf(int i)로 int를 사용하면 된다.
 
 ---
 
@@ -669,3 +901,9 @@ eclipse.ini
 --🍭 2023. 02. 22 내용, 5일차
 
 - 예외처리 / Chapter 8-4 예외처리하기(try-catch문) ~ Chapter 8-19 연결된 예외 
+
+---
+
+--🍭 2023. 02. 23 내용, 6일차
+
+- java.lang패키지와 유용한 클래스 / Chapter 9 ~ Chapter 9-13 문자열과 기본형 간의 변환
