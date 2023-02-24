@@ -613,7 +613,7 @@ deleteTempFile( )
 ---
 
 java.lang 패키지
-: 가장 기본이 되는 클래스의 묶음으로 import문 없이도 사용할 수 있다. Object클래스, String클래스
+: 가장 기본이 되는 클래스의 묶음으로 import문 없이도 사용할 수 있다. Object클래스, String클래스, StringBuffer클래스, Math클래스, Wrapper클래스, Number클래스
 
 Object 클래스
 : 모든 클래스의 최고 조상 클래스
@@ -839,6 +839,171 @@ Double.parseDouble(String s)
 
 만약, byte, short를 문자열로 변환 시 String valueOf(int i)로 int를 사용하면 된다.
 
+JDK1.7부터 "+"가 포함된 문자열이 parseInt( )로 변환가능
+
+static int parseInt(String a, int radix)
+: 16진수 값으로 표현된 문자열도 반환. a의 경우 정수값 10이 반환된다.
+
+StringBuffer클래스와 생성자
+: 문자열 변경과 더불어 문자열 길이 조절 가능한 클래스. Buffer의 크기는 기본적으로 16개의 문자를 저장할 수 있는 크기이며 이를 변경할 수 있다.
+
+---
+
+--🌡 StringBuffer의 생성자와 메서드
+
+StringBuffer( )
+: 16문자를 담을 수 있는 Buffer를 가진 StringBuffer 인스턴스를 생성
+
+StringBuffer( int length )
+: 지정된 개수의 문자를 담을 수 있는 버퍼를 가진 StringBuffer 인스턴스를 생성
+
+StringBuffer( String str )
+: 지정된 문자열 값 str를 갖는 StringBuffer 인스턴스를 생성
+
+StringBuffer append(boolean b)
+StringBuffer append(char c)
+StringBuffer append(char[ ] str)
+StringBuffer append(double d)
+StringBuffer append(float f)
+StringBuffer append(int i)
+StringBuffer append(long l)
+StringBuffer append(Object obj)
+StringBuffer append(String str)
+: 매개변수를 문자열로 변환한 뒤 StringBuffer인스턴스가 저장하고 있는 문자열의 뒤에 추가
+
+int capacity( )
+: StringBuffer인스턴스의 Buffer의 크기를 알려준다. length( )는 Buffer에 담긴 문자열의 길이를 알려준다.
+
+char charAt(int index)
+: 지정된 위치에 있는 문자를 반환
+
+StringBuffer delete(int start, int end)
+: 시작위치부터 끝 위치 사이에 문자를 제거, 단 끝 위치의 문자는 제외
+
+StringBuffer deleteCharAt(int index)
+: 지정된 위치의 문자를 제거
+
+StringBuffer insert(int pos, boolean b)
+StringBuffer insert(int pos, char c)
+StringBuffer insert(int pos, char[ ] str)
+StringBuffer insert(int pos, double d)
+StringBuffer insert(int pos, float f)
+StringBuffer insert(int pos, int i)
+StringBuffer insert(int pos, Object obj)
+StringBuffer insert(int pos, String str)
+: 두 번째 매개변수로 문자열을 변환하여 지정한 위치 pos에 추가. 0부터 시작
+
+int length( )
+: StringBuffer인스턴스에 저장되어 있는 문자열의 길이를 반환
+
+StringBuffer replace(int start, int end, String str)
+: 지정된 범위( start ~ end )의 문자들을 주어진 문자열로 바꾼다. end 위치는 포함되지 않는다 ( start <= x < end )
+
+StringBuffer reverse( )
+: StringBuffer인스턴스에 저장되어 있는 문자열의 순서를 거꾸로 나열
+
+void setCharAt(int index, char ch)
+: 지정된 위치의 문자를 주어진 문자 ch로 바꾼다.
+
+String toString( )
+: StringBuffer인스턴스의 문자열을 String으로 반환
+
+String substring(int start)
+String substring(int start, int end)
+: 지정된 범위 내 문자열을 String으로 뽑아서 반환. 시작위치 start만을 지정하면 시작위치부터 끝까지 뽑아서 반환.
+
+---
+
+StringBuilder
+: StringBuffer에서 쓰레드의 동기화만 뺀 것. StringBuffer는 멀티쓰레드에서 안전(thread safe)하도록 동기화되어 있다. 이 동기화가 StringBuffer의 성능을 떨어뜨린다.
+
+--🌡 참고, 대부분 예제는 싱글 쓰레드로 작성되어 있다.
+
+Math클래스
+: 수학계산에 유용한 메서드로 구성
+
+반올림
+: 일반적인 계산으로 정수 값에 10의 n제곱으로 곱한 뒤 10의 n제곱만큼의 정수를 .0 붙여 실수로 나누면 원하는 반올림 자리에 수를 얻는다. 
+
+--🌡 Math 메서드
+
+static double abs(double a)
+static double abs(float f)
+static int abs(int f)
+static long abs(long f)
+: 주어진 값의 절대값을 반환
+
+static double ceil(double a)
+: 주어진 값을 올림하여 반환
+
+static double floor(double a)
+: 주어진 값을 버림하여 반환. 음수를 버림하면 더 큰 음수 값으로 반환
+
+static double max(double a, double b)
+static float max(float a, float b)
+static int max(int a, int b)
+static long max(long a, long b)
+: 주어진 두 값을 비교하여 큰 쪽을 반환
+
+static double min(double a, double b)
+static float min(float a, float b)
+static int min(int a, int b)
+static long min(long a, long b)
+: 주어진 두 값을 비교하여 작은 쪽을 반환
+
+static double random()
+: 0.0 ~ 1.0 범위의 임의의 double값을 반환. ( 1.0은 범위에 포함되지 않는다. )
+
+static double rint(double a)
+: 주어진 double값을 가장 가까운 정수값을 double형으로 반환. 단, 두 정수의 정가운데 있는 값( 1.5, 2.5, 3.5 ... )는 짝수를 반환
+
+static long round(double a)
+static long round(float a)
+: 소수점 첫째자리에서 반올림한 정수값 long을 반환. 두 정수의 정가운데 있는 값( 1.5, 2.5 ... )는 항상 큰 정수를 반환
+
+---
+
+래퍼(wrapper) 클래스
+: Java는 기본형 타입 8개 ( bit, byte, short, char, int, long, float, double )은 객체로 다루지 않아 완전한 객체지향 언어가 아니라는 이야기도 한다.
+이 기본형 타입을 객체로 다루어야 할 때 쓰는 클래스가 래퍼(wrapper) 클래스이다.
+
+--🌡 래퍼(wrapper) 클래스 생성자
+
+-- boolean
+Boolean(boolean value)
+Boolean(String s)
+
+-- char
+Character(char value)
+
+-- byte
+Byte(byte value)
+Byte(String s)
+
+-- short
+Short(short value)
+Short(String s)
+
+-- int
+Integer(int value)
+Integer(String s)
+
+-- long
+Long(long value)
+Long(String s)
+
+-- float
+Float(double value)
+Float(float value)
+Float(String s)
+
+-- double
+Double(double value)
+Double(String s)
+
+래퍼클래스별 공통
+: static 상수인 MAX_VALUE, MIN_VALUE, SIZE, BYTES, TYPE를 갖고 있다. BYTES는 JDK1.8부터 추가
+
 ---
 
 🍭 cmd에서 한글 깨질 경우
@@ -907,3 +1072,9 @@ eclipse.ini
 --🍭 2023. 02. 23 내용, 6일차
 
 - java.lang패키지와 유용한 클래스 / Chapter 9 ~ Chapter 9-13 문자열과 기본형 간의 변환
+
+---
+
+--🍭 2023. 02. 24 내용, 7일차
+
+ - java.lang패키지와 유용한 클래스 / Chpater 9-14 ~ Chapter 9-26 래퍼(wrapper) 클래스
