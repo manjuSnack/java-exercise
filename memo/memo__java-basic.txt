@@ -1004,6 +1004,172 @@ Double(String s)
 래퍼클래스별 공통
 : static 상수인 MAX_VALUE, MIN_VALUE, SIZE, BYTES, TYPE를 갖고 있다. BYTES는 JDK1.8부터 추가
 
+진법(redix)에 따른 변환
+
+static int parseInt(String s, int radix)
+static Integer valueOf(String s, int radix)
+
+radix에 2, 8, 16를 대입해 각 2, 8, 16진법에 따른 변환이 가능하다. 
+
+JDK1.5 이전에는 기본형과 참조형 간 사칙연산조차 불가.
+
+오토박싱(autoboxing)과 언박싱(unboxing)
+
+intValue( )
+: Compiler가 Integer객체를 int 타입으로 값을 변환해주는 intValue( )를 추가해줌으로써 int와 Integer가 연산이 가능하다.
+
+Vector클래스나 ArrayList클래스에 기본형값을 래퍼 클래스의 객체로 자동 변환하는 걸 오토박싱(autoboxing), 반대로 변환하는 걸 언박싱(unboxing)이라 한다.
+
+---
+
+날짜와 시간
+Date
+: JDK1.0부터 제공된 날짜와 시간을 다루는 클래스. 
+
+Calendar
+: JDK1.1부터 제공된 달력 클래스
+
+java.time.클래스
+: JDK1.8부터 제공된 개선된 날짜, 시간 클래스
+
+--🌡 java.util 패키지에 속한 클래스로, java.sql패키지의 Date클래스와 다르다.
+
+Calendar 클래스
+: Calendar는 추상클래스이기 때문에 직접 객체를 생성할 수 없다.
+
+gitInstance( )
+: 태국인 경우 BuddhisCalendar의 인스턴스 반환. 그 외에는 GregorianCalendar의 인스턴스 반환
+
+Calendar 메서드
+
+Calendar.YEAR
+: 올 해 년도
+
+Calendar.MONTH
+: 이 번달, 0 ~11 이므로 0이 1월이다.
+
+Calendar.WEEK_OF_YEAR
+: 올 해의 몇째 주
+
+Calendar.WEEK_OF_MONTH
+: 이 번달의 몇째 주
+
+Calendar.DATE
+: 이 번달의 몇 일
+
+Calendar.DAY_OF_MONTH
+: 이 번달의 몇 일. Calendar.DATE와 같다.
+
+Calendar.DAY_OF_YEAR
+: 올 해의 몇 일
+
+Calendar.DAY_OF_WEEK
+: 요일. 1~7 중 1이 일요일
+
+Calendar.DAY_OF_WEEK_IN_MONTH
+: 이 번달의 몇째 요일
+
+Calendar.AM_PM
+: 오전은 0, 오후는 1
+
+Calendar.HOUR
+: 시간 0 ~ 11
+
+Calendar.HOUR_OF_DAY
+: 시간 0 ~ 23
+
+Calendar.MINUTE
+: 분
+
+Calendar.SECOND
+: 초
+
+Calendar.MILLISECOND
+: 1000분의 1초, 0 ~ 999
+
+Calendar.ZONE_OFFSET
+: MILLIISECOND 단위이며 만약 시로 표현하고자 할 경우 60 * 60 * 1000을 곱하여 준다. -12 ~ +12로 표현이 된다.
+
+날짜 인스턴스.get( )
+: 필드 읽기
+
+날짜 인스턴스.set( )
+: 필드 변경
+
+날짜 인스턴스.clear( )
+: 필드 초기화
+
+날짜 인스턴스.getActualMaximum(Calendar.DATE)
+: 이 달의 마지막 날
+
+날짜 인스턴스.getTimeInMillis( )
+: 날짜 인스턴스의 시간을 Milli Second 단위로 
+
+날짜 인스턴스.add(Calendar 생성자, 숫자)
+: 날짜 인스턴스의 생성자에 따라 숫자만큼 증가, 감소시킨다.
+
+날짜 인스턴스.roll(Calendar 생성자, 숫자)
+: 날짜 인스턴스의 생성자에 따라 숫자만큼 증가, 감소시키나 그 외 다른 필드에는 값이 영향이 없다. 
+
+--🌡 Date와 Calendar간의 변화
+
+-- Calendar를 Date로 변환
+
+Calendar cal = Calendar.getInstance( );
+
+Date d = new Date(cal.getTimeInMillis()); // Date(long date)
+
+-- Date를 Calendar로 변환
+
+Date d = new Date( );
+
+Calendar cal = Calendar.getInstance( );
+
+---
+
+형식화 클래스
+: java.text 패키지에 포함된 숫자, 날짜, 텍스트 데이터를 일정한 형식에 맞게 표현할 수 있다.
+
+DecimalFormat
+: 십진법 형식 지정으로, 숫자 데이터를 정수, 부동소수점, 금액 등 다양한 형식으로 표현
+
+DecimalFormat인스턴스를 생성한 하 format 메서드를 호출하여 원하는 형식으로 변환한 문자열을 얻는다.
+
+0
+: 10진수. 값이 없을 땐 0
+
+#
+: 10진수
+
+.
+: 소수점
+
+-
+: 음수부호
+
+,
+: 단위 구분자. 예, 100,000,000
+
+E
+: 지수기호
+
+;
+: 패턴구분자
+
+%
+: 퍼센트( % )
+
+\u2030
+: 퍼밀 ( % x 10 )
+
+\u00A4
+: 통화
+
+`
+: escape문자
+
+
+
 ---
 
 🍭 cmd에서 한글 깨질 경우
@@ -1030,51 +1196,3 @@ eclipse.ini
 @author ${user}를 @author manjuSnack으로 수정
 
 ---
-
---🍭 Java의 정석 학습과정
-
---🍭 2023. 02. 18 내용, 1일차
-
-- `Kokoa Clone 다시 만들기` 완성한 이후 Java의 정석 기초편 학습 내용 이후로 학습진행
-
-   : Chapter 6 객체지향언어부터 복습 후 이어 진행. 
-
-- 이전 학습 방법과 다른 방법으로 진행.
-   
-  : 동영상 강의 우선이 아닌 책 위주로 학습
-
----
-
---🍭 2023. 02. 19 내용, 2일차
-
-- 객체지향언어ⅰ / Chapter 6-22 ~ 7-14, 호출스택(call stack) ~ 클래스 패스(classpath)  
-
----
-
---🍭 2023. 02. 20 내용, 3일차
-
-- 객체지향언어ⅱ / Chapter 7-15 ~ 7-32, import문 ~ 추상메서드(abstract method)
-
----
-
---🍭 2023. 02. 21 내용, 4일차
-
-- 객체지향언어ⅱ / Chapter 7-33 추상클래스의 작성 ~ 예외처리 / Chapter 8-3 Exception과 RuntimeException 
-
----
-
---🍭 2023. 02. 22 내용, 5일차
-
-- 예외처리 / Chapter 8-4 예외처리하기(try-catch문) ~ Chapter 8-19 연결된 예외 
-
----
-
---🍭 2023. 02. 23 내용, 6일차
-
-- java.lang패키지와 유용한 클래스 / Chapter 9 ~ Chapter 9-13 문자열과 기본형 간의 변환
-
----
-
---🍭 2023. 02. 24 내용, 7일차
-
- - java.lang패키지와 유용한 클래스 / Chpater 9-14 ~ Chapter 9-26 래퍼(wrapper) 클래스
