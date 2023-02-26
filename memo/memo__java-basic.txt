@@ -35,6 +35,22 @@ Tomcat Install 확인 ( Command Line에서 )
 STS도 압축만 풀고 내부에 STS를 실행시키면 된다.
 : 만약에 실행과정 화면이 정상적으로 보이지 않으면 환경변수에 문제가 있다.
 
+🍭 VScode에서의 Java 설치
+
+Extensions -- Extension Pack for Java 설치
+
+설치항목
+Language Support for Java(TM) by Red Hat
+Debugger for Java
+Test Runner for Java
+Maven for Java
+Project Manager for Java
+IntelliCode
+
+--🌡 F1 Key -- Configure Java Runtime에서 알맞은 JDK Version에 골라 설치.
+
+
+
 ----
 
 🍭 #ch1-7 자바 API( Application Programing Interface )
@@ -187,6 +203,46 @@ set classpath=<`\bin 경로`>;<추가하고 싶은 경로>
 ---
 
 --🍭 생소한 Method()
+
+--🌡 화면으로부터 입력받기
+
+String next( )
+: 다음 토큰을 문자열로 반환. 빈 문자열인 공백은 반환하지 않는다.
+
+String nextLine( )
+: \n을 포함해 읽고 \n을 버린 나머지 문자열을 반환
+
+boolean hasNext( )
+: 빈 문자열을 기준으로 끊어 다른 문자열이 있으면 true로 반환. ctrl + z는 입력 종료이므로 false를 반환한다.
+
+boolean hasNextLine( )
+: \n을 기준으로 한 줄씩 끊어 문자열이 있으면 true로 반환.  
+
+byte nextByte( )
+: 다음 토큰을 byte타입으로 반환
+
+short nextShort( )
+: 다음 토큰을 short 타입으로 반환
+
+int nextInt( )
+: 다음 토큰을 int 타입으로 반환
+
+long nextLong( )
+: 다음 토큰을 long 타입으로 반환
+
+float nextFloat( )
+: 다음 토큰을 float 타입으로 반환
+
+double nextDouble( )
+: 다음 토큰을 double 타입으로 반환
+
+boolean nextBoolean( )
+: 다음 토큰을 boolean 타입으로 반환
+
+void close( )
+: Scanner의 사용 종료
+
+
 
 print()
 
@@ -1167,6 +1223,143 @@ E
 
 `
 : escape문자
+
+--🌡 Integer.parseInt( )와 Integer.parse( )
+Integer.parseInt( )는 콤마( , )가 포함된 문자열을 숫자로 변환불가 
+Integer.parse( )는 기호와 문자가 포함된 문자열을 숫자로 변환가능. substring( )는 기호를 빼내어야 하는 수고가 있다.
+
+SimpleDateFormat
+: 추상 클래스인 DateFormat은 SimpleDateFormat 클래스의 조상 클래스. Date와 Calendar보다 간단히 날짜를 구현할 수 있는 클래스
+
+컬렉션 프레임웍 ( Collection Framework )
+: 다수의 데이터( data group, collection )를 다루기 위한 단일화된 구조(architecture)
+
+이 때 다룬다는 것은 "저장, 삭제, 검색, 정렬"을 다룬다는 뜻이다.
+
+--🌡 
+JDK1.2 이전에는 Vector, Hashtable, Properties와 같은 Collection 클래스를 각각 방식으로 구현. 
+JDK1.2 이후에는 Collection Framework으로 모든 클래스를 다룰 수 있게 바뀌었다.
+
+라이브러리(library)와 프레임웍(framework)
+
+라이브러리(library)
+: 공통으로 사용될 만한 유용한 기능을 모듈화(module)하여 제공
+
+모듈(module)
+: 본체에 대한 독립된 하위 단위
+
+프레임웍(framework)
+: 라이브러리(library)와 정형화된 프로그래밍(Programming) 방식
+
+Collection framework의 핵심 Interface
+: List, Set, Map이 있다. Collection은 List와 Set의 공통된 부분을 모은 Interface.
+
+List
+: 순서가 있는 데이터의 집합. 데이터의 중복을 허용. ArrayList, LinkedList, Stack, Vector
+
+Set
+: 순서가 없는 데이터의 집합. 데이터의 중복을 허용 안 함. HashSet, TreeSet
+
+Map
+: 키(Key)와 값(Value)의 쌍(Pair)로 이뤄진 데이터의 집합. 키(Key)는 중복 허용 안 함, 값(Value)는 중복 허용.
+HashMap, TreeMap, Hashtable, Properties
+
+--🌡 열쇠(key)는 어떤 값(value)을 찾는 데 열쇠(key)가 된다는 의미에서 유래.
+
+---
+
+Collection 인터페이스
+: List와 Set의 조상 Interface.
+
+--🌡 Collection Interface의 Method( ) ( List와 Set 인터페이스의 공용 )
+
+boolean add(Object o)
+boolean addAll(Collection c)
+: 지정된 객체(o) 또는 Collection(c)의 객체들을 Collection에 추가한다.
+
+void clear( )
+: Collection의 모든 객체를 삭제
+
+boolean contains(Object o)
+boolean containsAll(Collection c)
+: 지정된 객체(o) 또는 Collection(c)의 객체들을 Collection에 포함됬는지 확인
+
+boolean equals(Object o)
+: 동일한 Collection인지 비교
+
+int hashCode( )
+: Collection의 hash code를 반환
+
+boolean isEmpty( )
+: Collection이 비었는지 확인
+
+iterator iterator( )
+: Collection의 iterator를 얻어서 반환. iterator는 반복자라는 뜻이며 Collection에 저장된 요소를 접근하는데 사용되는 Interface
+
+boolean remove(Object o)
+: 지정된 객체를 삭제
+
+boolean removeAll(Collection c)
+: 지정된 Collection에 포함된 객체들을 삭제
+
+boolean retainAll(Collection c)
+: 지정된 Collection에 포함된 객체만을 남기고 다른 객체들은 삭제, 이 작업으로 인해 Collection에 변화가 있으면 true, 아니면 false를 반환
+
+int size( )
+: Collection에 저장된 객체의 개수 반환
+
+Object[ ] toArray( )
+: Collection에 저장된 객체를 객체배열 Object[ ] 로 반환
+
+Object[ ] toArray( Object[ ] a )
+: 지정된 배열에 Collection의 객체를 저장해 반환
+
+JDK1.8 부터는 parallelStream, removeIf, stream, forEach는 람다(Lambda)와 스트림(Stream)에서 설명
+
+--🌡 Java API 문서에 E, K, V 등의 기호는 지네릭스에 의한 표기로, Object 타입을 가진다.
+
+List 인터페이스
+: List -- ArrayList / LinkedList / Vector -- Stack 
+
+void add(int index, Object element)
+boolean addAll(int index, Collection c)
+: 지정된 위치(index)에 객체(element) 또는 컬렉션에 포함된 객체들 추가
+
+Object get(int index)
+: 지정된 위치(index)에 있는 객체를 반환
+
+int indexOf(Object o)
+: 지정된 객체의 위치(index)를 반환. List의 첫 번째 요소부터 순방향으로 찾기
+
+int lastIndexOf(Object o)
+: 지정된 객체의 위치(index)를 반환. List의 마지막 요소부터 역방향으로 찾기
+
+ListIterator listIterator( )
+ListIterator listIterator(int index)
+: List의 객체에 접근할 수 있는 ListIterator를 반환
+
+Object remove(int index)
+: 지정된 위치(index)에 있는 객체를 삭제 후 삭제된 객체를 반환
+
+Object set(int index, Object element)
+: 지정된 위치(index)에 객체(element)를 저장
+
+void sort(Comparator c)
+: 지정된 비교자(comparator)로 List를 정렬
+
+List subList(int fromIndex, int toIndex)
+: 지정된 범위( fromIndex부터 toIndex까지 )에 있는 객체를 반환
+
+---
+
+Set 인터페이스
+: Set -- HashSet / SortedSet -- TreeSet
+
+위의 Collection Interface의 Method( )와 같다.
+
+---
+Map 인터페이스
+: Map -- Hashtable / HashMap -- LinkedHashMap / SortedMap -- TreeMap
 
 
 
