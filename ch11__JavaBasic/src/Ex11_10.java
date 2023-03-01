@@ -1,7 +1,7 @@
 import static java.lang.System.*;
 import java.util.*;
 
-// 로또번호 만드는 예제
+// HashSet으로 로또번호 만드는 예제 
 public class Ex11_10 {
     public static void main(String[] args) {
         Set set = new HashSet();
