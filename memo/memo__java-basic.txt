@@ -1902,6 +1902,135 @@ Object[ ] toArray( )
 Object[ ] toArray( Object[ ] o )
 : 저장된 객체를 주어진 객체배열에 저장해 반환
 
+---
+
+🍫 HashMap과 Hashtable
+
+: Hashtable과 HashMap의 관계는 Vector와 ArrayList와 같이 기능이 개선된 것의 차이이며 HashMap이 보다 더 개선되어 있다.
+
+만약, 순서를 유지하고자 하려면 LinkedHashMap을 사용
+
+--🍬 Hashtable은 동기화가 가능, HashMap은 동기화가 가능하지 않다.
+: 13장 쓰레드 참고
+
+--🍬 TreeSet과 TreeMap
+: TreeSet은 TreeMap으로 만든 클래스이기에 같은 특징을 갖고 있다.
+
+--🍬 HashMap 용도
+
+: id 와 password 추가, 수정, 확인, 검증에도 사용 / 학점 계산  / 한정된 범위 내에 순차적인 값들의 빈도수 찾기
+
+/ HashMap
+
+: 키(key)와 값(value)을 묶어 하나의 데이터(entry)로 저장한다. 
+해싱(hashing)이라는 방법으로 많은 양의 데이터를 검색하는데 탁월하다.
+
+🍫 해싱(hashing) -- 책에 없는 내용
+
+: 해시함수(hash function)에 의해 해시테이블(hash table)에 데이터(베열의 index)를 읽어오거나 저장하는 것
+
+🍫 해시테이블(hash table) -- 책에 없는 내용
+
+: 배열과 Linked list를 조합한 형태로 배열의 접근성과 Linked List에 데이터 변경의 유리함을 합쳐놓았다.
+
+🍫 해시테이블(hash table)의 데이터 가져오는 과정 -- 책에 없는 내용
+
+: 키(key)로 해시함수를 호출해 해시코드(hash code)를 얻는다. --
+해시코드(해시함수의 반환 값)인 배열의 index에 대응하는 Linked List를 배열에서 찾는다. --
+Linked List에서 키(key)와 일치하는 데이터(entry)를 찾는다.
+
+--🍬 해시함수는 같은 키에 대해 항상 같은 해시코드를 반환해야 한다. 
+
+🍫 HashMap의 키(key)와 값(value)
+
+: HashMap은 키와 값을 모두 Object로 저장
+
+/ 키(key)
+
+: Collection 내의 키(key) 중 유일무이(unique)해야 한다.
+
+/ 값(value)
+
+: 키(key)와 달리 데이터 중복이 가능하다.
+
+🍫 HashMap의 Method
+
+/ 생성
+HashMap( )
+: HashMap 객체를 생성
+
+HashMap( int initialCapacity )
+: 지정된 값을 초기용량으로 하는 HashMap객체를 생성
+
+HashMap( int initialCapacity, float loadFactor )
+: 지정된 초기용량과 load factor의 HashMap객체를 생성
+
+-🌡 load factor는 저장공간이 가득 차기 전에 미리 용량을 확보하기 위함, 기본값은 75%인 0.75이다.
+
+Object clone( )
+: 현재 HashMap을 복제해서 반환
+
+Set entrySet( )
+: HashMap에 저장된 키와 값을 엔트리(entry, 키와 값의 결합)의 행태로 Set에 저장해 반환
+
+Set keySet( )
+: HashMap에 저장된 모든 키가 저장된 Set을 반환
+
+Collection values( )
+: HashMap에 저장된 모든 값을 Collection의 형태로 반환
+
+Object put( Object key, Object value )
+: 지정된 키와 값을 HashMap에 저장
+
+--🍬 Hashtable에서는 키(key)와 값(value)에 null을 허용하지 않는다. HashMap에서는 map.put(null, null)이나 map.put(null)이 가능하다.
+
+void putAll( Map m )
+: Map에 저장된 모든 요소를 HashMap에 저장
+
+Object replace( Object key, Object value )
+: 지정된 키의 값을 지정된 객체(value)로 대체
+
+boolean replace( Object key, Object oldValue, Object newValue )
+: 지정된 키와 객체( oldValue )가 모두 일치하는 경우에만 새로운 객체( newValue )로 대체
+
+
+/ 삭제
+void clear( )
+: HashMap에 저장된 모든 객체 제거
+
+Object remove( Object key )
+: HashMap에서 지정된 키로 저장된 값(객체)을 제거
+
+
+/ 검색
+
+boolean isEmpty( )
+: HashMap이 비었는지 확인
+
+boolean containsKey( Object key )
+: HashMap에 지정된 키(key)가 포함됬는지 확인. 포함이 되었으면 true
+
+boolean containsValue( Object value )
+: HashMap에 지정된 값(value)가 포함됬는지 확인. 포함이 되었으면 true
+
+Object get( Object key )
+: 지정된 키(key)의 값(객체)를 반환. 못 찾으면 null 반환
+
+Object getOrDefault( Object key, Object defaultValue )
+: 지정된 키(key)의 값(객체)를 반환. 키를 못 찾으면, 기본값(defaultValue)로 지정된 객체를 반환
+
+int size( )
+: HashMap에 저장된 요소의 개수를 반환
+
+--🍬 Map Interface와 Entry Interface
+
+Entry Interface
+: Map의 내부 Interface
+
+
+---
+
+
 
 ---
 
@@ -1910,8 +2039,6 @@ Object[ ] toArray( Object[ ] o )
 
 java.util 경로
 : jdk17 -- lib -- src -- java.base -- java -- util
-
-
 
 ---
 
