@@ -18,9 +18,9 @@ Books : Java의 정식, 명품 Java Programing, Java 200제, Java 웹을 다루�
 - [x] 예외처리
 - [x] java.lang 패키지와 유용한 클래스
 - [x] 날짜와 시간 & 형식화
-- [ ] 컬렉션 프레임웍 -- 학습중
+- [x] 컬렉션 프레임웍
+- [ ] 지네릭스, 열거형, 애너테이션 -- 학습중
 - [ ] 쓰레드(thread)
-- [ ] 지네릭스, 열거형, 애너테이션
 - [ ] 람다와 스트림(Lambda & Stream)
 - [ ] 입출력( I/O )
 - [ ] 네트워킹(Networking)
@@ -34,5 +34,3 @@ Books : Java의 정식, 명품 Java Programing, Java 200제, Java 웹을 다루�
 # A new attempt.
 
 : 추후 학습 후 `A new attempt`로 `Project` 만들어 볼 예정. 현재는 학습 내용 기록.
-
---🌡 일기장 쓰기 금지
