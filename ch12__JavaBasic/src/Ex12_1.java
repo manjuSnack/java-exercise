@@ -18,10 +18,10 @@ public class Ex12_1 {
         // Error. generics의 type variable은 참조변수와 생성자에서 타입이 일치해야 한다.
         // List<Tv> tvList = new ArrayList<Tv>(); // OK. 다형성
 
-        productList.add(new Tv());
+        productList.add(new Tv()); // public boolean add(Pruduct e)
         productList.add(new Audio());
 
-        tvList.add(new Tv());
+        tvList.add(new Tv()); // public boolean add(Tv e)
         // tvList.add(new Audio()); // Error.
 
         printAll(productList);
