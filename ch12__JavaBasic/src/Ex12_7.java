@@ -10,15 +10,5 @@ class Child extends Parent {
     }
 }
 
-class newClass {
-    @Deprecated
-    int oldField;
-
-    @Deprecated
-    int getOldField() {
-        return oldField;
-    };
-}
-
 public class Ex12_7 {
 }

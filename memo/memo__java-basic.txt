@@ -2067,11 +2067,13 @@ enum 열거형이름 { 상수명1, 상수명2, 상수명3 }
 
 열거형 생성자는 암묵적으로 private라서, 외부에서 객체생성이 불가하다.
 
-🥞 #12.23 애너테이션(Annotation)이란?, 표준 애너테이션, @Override, @Deprecated
+🥞 #12.23~12.26 애너테이션(Annotation)이란?, 표준 애너테이션, @Override, @Deprecated
 
 Annotation ( JDK에서 기본으로 제공하는 것은 meta annotation )
 : java.lang.annotation 패키지에 포함되어 있다.
 주석이지만 주로 Compiler와 소통에 있어 유효한 정보를 제공하여 준다.
+
+🥞 #12.27~12.32 @FunctionalInterface, @SuppressWarnings, 메타 애너테이션, @Target, @Retention, @Documeted / @Inherited, @Repeatable
 
 ---
 
