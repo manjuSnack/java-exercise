@@ -164,7 +164,7 @@ ctrl+/ : 주석(토글)
 ctrl+space : 자동완성
 
 🍭 단축키 재설정 방법
-: Windows -- Preferences -- General -- Appearance -- Keys-copy line 검색(행단위 복사일 경우) -- Binding 에서 단축키 설정 -- Apply and Close
+: Windows -- Preferences -- General -- Keys -- 만약, Keys-copy line 검색(행단위 복사일 경우) -- Binding 에서 단축키 설정 -- Apply and Close
 
 🍭 자동완성 재설정 방법
 Windows -- Preferences -- Java -- Editor -- Templates -- sysout(바꾸고 싶은 자동완성 이름 찾아 선택) -- Edit -- Name 변경(sysout를 sop로 바꿈) -- Rename -- Apply Close
@@ -2122,6 +2122,32 @@ Compile 관련은 맨 위에 '🥤 Compile ( javac.exe )'의 내용 참고
 
 ---
 
+🥞 #13 쓰레드(thread), #13.1~13.6 프로세스(process)와 쓰레드(thread), 멀티쓰레딩의 장단점, 쓰레드의 실행 - start( ), start( )와 run( )
+
+LWP ( Light-weight process )
+: 경량 프로세스, 쓰레드를 가벼운 프로세스라고도 부른다.
+
+Synchronization
+: 동기화
+
+deadlock
+: 교착상태. 두 쓰레드가 자원을 점유한 채, 서로 점유한 자원을 사용하려 기다리느라 진행이 멈춘 상태.
+
+-- 쓰레드 구현
+: Thread클래스 상속 또는 Runnable Interface를 구현하여 쓰레드를 구현한다.
+
+-- 쓰레드의 실행
+: 한번 실행이 종료된 메서드는 다시 실행할 수 없기 때문에, 다시 생성 후 start( )로 실행하여야 한다.
+
+-- start( )와 run( )
+
+run( )
+: Call stack에서 선언된 메서드를 호출하는 것일 뿐이다.
+
+start( )
+: Call stack에서 start( )가 호출되어 독립된 공간을 생성한 후 그 위에 run( )을 호출한 후 start( )는 소멸. 
+두 Call stack인 main( )과 run( )을 Scheduler(스케줄러)가 정한 순서에 의해 번갈아 실행한다.
+
 --🥞 나누기 %
 
 1 % 4인 경우, 몫이 0, 나머지는 1
@@ -2137,6 +2163,22 @@ Compile 관련은 맨 위에 '🥤 Compile ( javac.exe )'의 내용 참고
 
 java.util 경로
 : jdk17 -- lib -- src -- java.base -- java -- util
+
+---
+
+🥤 Eclipse에서 Git Clone 불러오기
+
+Eclipse에서 
+: Windows -- Perspective -- Open perspective -- Other -- Git
+
+Clone a Git repository -- Git 주소 붙여넣기 -- Authentication에서 id, password 입력 -- Clone할 Branch 선택
+
+Git에서
+: Git repository -- Code -- Clone -- 주소 복사
+
+🥤 Workspace Import 
+
+File -- Import -- Project from Folder or Archive -- Directory -- Project 선택
 
 ---
 
@@ -2162,5 +2204,15 @@ eclipse.ini
 : -Duser.name=manjuSnack 추가 혹은 Eclipse에서 Window / Preferences / Java / Code Style / Code Templates / Comments / Types에서
 
 @author ${user}를 @author manjuSnack으로 수정
+
+🍭 UTF-8 Setting
+
+github 등에 commit, push할 때 UTF-8로 바꾸지 않으면 글자가 전부 깨진다. 만약 UTF-8로 바꾸지 않고 작성한 Code는 새로 작성해야 한다.
+
+🎈 Prefereces 설정 
+General -- Workspace - Text file encoding : Other : UTF-8
+General - Content Types - Java Class File - Default encoding : UTF-8 후  Update
+General - Editors - Text Edotprs -- Spelling - Dictionaries - Encoding : Default : UTF-8
+Web - HTML Files, CSS Files 와 JSP Files에 The following encoding will apply : Encoding : ISO 10646/Unicode(UTF-8)로 각각 변경
 
 ---
