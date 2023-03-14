@@ -2124,14 +2124,52 @@ Compile 관련은 맨 위에 '🥤 Compile ( javac.exe )'의 내용 참고
 
 🥞 #13 쓰레드(thread), #13.1~13.6 프로세스(process)와 쓰레드(thread), 멀티쓰레딩의 장단점, 쓰레드의 실행 - start( ), start( )와 run( )
 
+-- 프로세스와 쓰레드
+
+Process
+: 자원(resources)인 Memory, CPU를 일컫는다. 
+
+쉽게 말해, 게임 속에 Command Center와 같다.
+
+Thread
+: 프로세스 내에 실제 작업을 수행하는 것. 모든 프로세스는 최소 하나의 쓰레드를 갖고 있다.
+
+쉽게 말해, 게임 속에 SCV와 같다.
+
+
 LWP ( Light-weight process )
 : 경량 프로세스, 쓰레드를 가벼운 프로세스라고도 부른다.
+
+--🥤 작업관리자 ( Ctrl + Alt + Delete ) -- 세부정보
+
+PID 
+: Process ID
+
+이름, PID, 상태.. 열에서 Context Menu -- 열 선택 -- 스레드
+: 스레드가 얼마인지 볼 수 있다.
+
+-- 멀티 쓰레드의 장점
+
+-- 🥤 CGI 와 JSP Servlet ( 1990년대 말 )
+
+CGI ( Common Gateway Interface )
+: 처음엔 단일 쓰레드를 사용했다.
+
+JSP Servlet
+: 멀티쓰레드(Multi Thread)로 당시 CGI의 단점을 보완했었다.
+
+---
+
+-- 멀티쓰레드의 단점
 
 Synchronization
 : 동기화
 
 deadlock
 : 교착상태. 두 쓰레드가 자원을 점유한 채, 서로 점유한 자원을 사용하려 기다리느라 진행이 멈춘 상태.
+
+기아(굶어 죽는 현상)
+: 쓰레드가 작업할 기회가 오지 않는 현상
 
 -- 쓰레드 구현
 : Thread클래스 상속 또는 Runnable Interface를 구현하여 쓰레드를 구현한다.
@@ -2146,7 +2184,21 @@ run( )
 
 start( )
 : Call stack에서 start( )가 호출되어 독립된 공간을 생성한 후 그 위에 run( )을 호출한 후 start( )는 소멸. 
-두 Call stack인 main( )과 run( )을 Scheduler(스케줄러)가 정한 순서에 의해 번갈아 실행한다.
+두 Call stack인 main( )과 run( )을 OS의 Scheduler(스케줄러)가 정한 순서에 의해 번갈아 실행한다.
+
+🥤 # 13.7~13.12 main 쓰레드, 싱글쓰레드와 멀티쓰레드, 예제1~2, 쓰레드의 I/O 블락킹(blocking), 예제 1~
+
+사용자 쓰레드( user thread / non-daemon thread )
+
+데몬 쓰레드( daemon thread )
+
+context switching
+: 프로세스 또는 쓰레드 간의 작업 전환
+
+I/O Blocking 
+: 쓰레드가 사용자나 외부기기로부터 입출력( Input / Ouput ) 처리를 위해 기다리는 것
+
+----
 
 --🥞 나누기 %
 
