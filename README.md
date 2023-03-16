@@ -19,8 +19,8 @@ Books : Java의 정식, 명품 Java Programing, Java 200제, Java 웹을 다루�
 - [x] java.lang 패키지와 유용한 클래스
 - [x] 날짜와 시간 & 형식화
 - [x] 컬렉션 프레임웍
-- [ ] 지네릭스, 열거형, 애너테이션
-- [ ] 쓰레드(thread)
+- [x] 지네릭스, 열거형, 애너테이션
+- [x] 쓰레드(thread)
 - [ ] 람다와 스트림(Lambda & Stream)
 - [ ] 입출력( I/O )
 - [ ] 네트워킹(Networking)
