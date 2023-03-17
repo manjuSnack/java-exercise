@@ -17,7 +17,7 @@ public class Ex14_2 {
 
         printEvenNum(p, c, list); // predicate, consumer, list
         List<Integer> newList = doSomething(f, list); // function
-        out.println(list);
+        out.println(newList);
     }
 
     static <T> List<T> doSomething(Function<T, T> f, List<T> list) {

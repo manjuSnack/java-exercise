@@ -2287,10 +2287,61 @@ Function<T, R> / R apply( T t )
 Predicate<T> / boolean test( T t )
 : 매개변수 하나, 반환값 boolean
 
+--🥤 매개 변수가 2개인 함수형 인터페이스
+
+BiConsumer<T, U> / void accpt(T t, U u)
+: 매개변수 두 개 O, 반환값 X
+
+BiPredicate<T, U> / boolean test(T t, U u)
+: 매개변수 둘, 반환값 boolean
+
+BiFunction<T, U, R> / R apply(T t, U, u)
+: 매개변수 두 개 O, 반환값 하나 O
+
+--🥤 <> 안에 용어
+
+T
+: Type
+
+U, V, W
+: T 외에 추가, 타입의 매개변수. 큰 의미는 없다.
+
+R
+: Return
+
+# 14.9~14.14 Predicate의 결합, 예제, 컬렉션 프레임웍과 함수형 인터페이스, 예제, 메서드 참조, 생성자의 메서드 참조
+
+--🥤 &&(and), || (or), !(not)
+
+and( ), or( ), negate( )로 여러 조건식을 하나로 합칠 수 있다. 단, negate( )는 조건식 전체가 부정이 된다.
+
+- 두 대상을 비교하기
+
+.isEqual( 비교대상 )
+.test( 또 다른 비교대상 )
+
+위의 2가지의 과정으로 비교한다.
+
+- 하나의 메서드만 호출하는 람다식
+
+'클래스이름::메서드이름' 혹은 '참조변수::메서드이름' 및 '참조변수[ ]::메서드이름' 으로 바꿀 수 있다.
+
+# 14.15~14.20 스트림(stream), 스트림의 특징, 스트림 만들기 - 컬렉션, 배열, 임의의 수, 특정 범위의 수
+
+--🥤 JDK1.8부터 스트림(Stream)으로 데이터( List, Set, Map )를 표준화하여 다룰 수 있다.
+
+--🥤 스트림 구조
+
+stream.중간연산.중간연산.중간연산.최종연산
+
+: 중간연산은 반복적으로 가능.
+
+- 임의의 수
+
+Random클래스의 메서드( ints( ), longs( ), doubles( ) )는 무한스트림(infinite stream)이므로 limit( )도 같이 사용하여 제한할 것
 
 
-
-
+# 14.21 스트림 만들기 - 람다식 iterate( ), generate( )
 
 ----
 
