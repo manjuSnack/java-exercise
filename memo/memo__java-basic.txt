@@ -6,12 +6,12 @@ Java의 정석(기초편)
 
 ---
 
-🍭 #ch1-5~6 자바 개발도구(JDK, Java Development Kit) 설치하기, 설정하기
+#ch1-5~6 자바 개발도구(JDK, Java Development Kit) 설치하기, 설정하기
 
-🍭 Java Eclipse 설치
+# Java Eclipse 설치
 : JDK 11과 eclipse를 받는다. 실제로는 압축하여 USB 등에 옮겨 작업한다.
 
-🍭 환경 변수 설정
+# 환경 변수 설정
 시스템 환경 변수-시스템 변수-Path-jdk경로\bin-확인
 : 환경 변수를 맨 위로 올려야 Database 작업 시 충돌 방지.
 
@@ -25,7 +25,7 @@ Java Install 확인
 
 만약, Java version과 Java(TM) SE Runtime Environment version이 상이한 경우에는 cmd에서 javac, java 명령어가 작동되지 않는다.
 
-🍭 Java Spring 
+# Java Spring 
 Tomcat Install 확인 ( Command Line에서 )
 : d: , cd D:\Coding\java\apache-tomcat-9.0.70\bin, startup으로 Tomcat이 잘 설치되었는지 확인할 수 있다.
 맨 밑에 startup.Catalina.start ... 가 보이면 브라우저에서 localhost:8080을 가면 Tomcat에 대한 정보가 나온다.
@@ -35,7 +35,7 @@ Tomcat Install 확인 ( Command Line에서 )
 STS도 압축만 풀고 내부에 STS를 실행시키면 된다.
 : 만약에 실행과정 화면이 정상적으로 보이지 않으면 환경변수에 문제가 있다.
 
-🍭 VScode에서의 Java 설치
+# VScode에서의 Java 설치
 
 Extensions -- Extension Pack for Java 설치
 
@@ -47,13 +47,13 @@ Maven for Java
 Project Manager for Java
 IntelliCode
 
---🌡 F1 Key -- Configure Java Runtime에서 알맞은 JDK Version에 골라 설치.
+--🥤 F1 Key -- Configure Java Runtime에서 알맞은 JDK Version에 골라 설치.
 
 
 
 ----
 
-🍭 #ch1-7 자바 API( Application Programing Interface )
+#ch1-7 자바 API( Application Programing Interface )
 
 : Package 목록, Class 목록으로 All Class에 대한 내용을 참고할 수 있다.
 
@@ -67,7 +67,7 @@ INDEX
 
 ----
 
-🍭 #ch1-8~9 자바 첫 프로그램 작성하기, 자바 프로그램의 실행과정
+#ch1-8~9 자바 첫 프로그램 작성하기, 자바 프로그램의 실행과정
 
 work 폴더 생성
 : 경로\jdk11\에서 work 폴더 생성해 둔다. 이곳에 .java 파일을 저장하는데 꼭 첫 문자는 대문자로 작성한다.
@@ -98,9 +98,9 @@ javac -Xlint:deprecation 클래스명.java -encoding utf-8
 
 ----
 
-🍭 #ch1-10~12 Eclipse 설치하기, Eclipse로 Java 프로그램 개발하기, Eclipse의 View, Perspective, Workspace
+#ch1-10~12 Eclipse 설치하기, Eclipse로 Java 프로그램 개발하기, Eclipse의 View, Perspective, Workspace
 
-🍭 Download할 Eclipse 종류.
+# Download할 Eclipse 종류.
 
 Eclipse IDE for Java EE Developers
 : Web Application을 만들 때 사용. 현재 이것으로 설치했다.
@@ -111,14 +111,14 @@ Eclipse IDE for Java Developers
 Eclipse for Android Developes
 : Android Studio를 대신 사용한다.
 
-🍭 Eclipse 내부의 View, Perspective, Workspace
+# Eclipse 내부의 View, Perspective, Workspace
 
 하나의 창을 View라 부르고, 구성 화면 전체를 Perspective(관점)라고 부른다.
 
 Workspace
 : Eclipse에서 작성한 파일이 저장되는 공간을 Workspace라고 한다. Eclipse가 처음 열릴 때 확인해 볼 수 있다.
 
-🍭 Build 관련 메뉴 설명
+# Build 관련 메뉴 설명
 
 : 소스파일(*.java)로부터 프로그램을 만들어 내는 전 과정
 
@@ -138,7 +138,7 @@ Project -- Build Automatical
 
 : .java File을 변경하고 매 저장할 때마다 .class를 알아서 생성해준다.
 
-🍭 Navigator
+# Navigator
 
 탐색기와 같다. Compile 후 *.class를 확인할 수 있다.
 
@@ -146,9 +146,9 @@ Windows -- Show View -- Navigator
 
 ----
 
-🍭 ch1-13~16장, Eclipse의 단축키, Eclipse의 자동완성 기능, Eclipse의 주석(Comment), 자주 발생하는 에러와 해결방법
+# ch1-13~16장, Eclipse의 단축키, Eclipse의 자동완성 기능, Eclipse의 주석(Comment), 자주 발생하는 에러와 해결방법
 
-🍭 Ex1_1 참고
+# Ex1_1 참고
 
 ctrl+shift+L : 단축키 전체 목록보기
 ctrl+ '+, -' : Font 크기 증가/감소
@@ -163,42 +163,42 @@ ctrl+i : 들여쓰기, 내어쓰기 자동맞춤
 ctrl+/ : 주석(토글) 
 ctrl+space : 자동완성
 
-🍭 단축키 재설정 방법
+# 단축키 재설정 방법
 : Windows -- Preferences -- General -- Keys -- 만약, Keys-copy line 검색(행단위 복사일 경우) -- Binding 에서 단축키 설정 -- Apply and Close
 
-🍭 자동완성 재설정 방법
+# 자동완성 재설정 방법
 Windows -- Preferences -- Java -- Editor -- Templates -- sysout(바꾸고 싶은 자동완성 이름 찾아 선택) -- Edit -- Name 변경(sysout를 sop로 바꿈) -- Rename -- Apply Close
 
-🍭 자동완성 확장 방법
+# 자동완성 확장 방법
 Windows -- Preferences -- Java -- Editor -- Content Assist -- Auto Activation treggers for Java에서 . 를 .abcdefghijklmnopqrstuvwxyz로 바꾸고 저장
 
 ----
 
--- 🍭 #ch01-17~19장 책의 소스와 강의자료 다운로드, Eclipse 소스파일 가져오기, 내보내기
+-- #ch01-17~19장 책의 소스와 강의자료 다운로드, Eclipse 소스파일 가져오기, 내보내기
 
-🍭 소스파일 불러오기
+# 소스파일 불러오기
 Eclipse 좌측 View에 Package Workspace에서 빈공간 우클릭 import-General-Existing Projects into Workspace-Select root directory로 Directory 찾기, Copy projects into workspace 체크(복사본으로 불러오기)
 
-🍭 소스파일 내보내기
+# 소스파일 내보내기
 Eclipse 좌측 View에 Package Workspace에서 빈공간 우클릭 export-General-Archive file-Export할 Project 선택, to archive file 경로 선택 
 
 ---
 
---🍭 #ch7-12~14 패키지( package ), 패키지의 선언, 클래스 패스( Classpath )
+--#ch7-12~14 패키지( package ), 패키지의 선언, 클래스 패스( Classpath )
 
 rt.jar
 : runtime.jar로 runtime이라는 말 그대로 실행을 담당하는 클래스를 묶어놓은 압축파일. 
 Java 9부터는 rt.jar이 아닌 module 개념을 도입하여 사용한다.
 
-🍭 .java 파일이 저장된 탐색기 경로 보기
+# .java 파일이 저장된 탐색기 경로 보기
 
 .java -- context menu -- Show in -- System Explorer
 
-🍭 Class 파일 찾아 실행하기
+# Class 파일 찾아 실행하기
 
 cmd.exe에서 위의 .java 파일이 저장된 탐색기 경로에 \bin 경로가서 `java <package명.class명>`으로 실행시킬 수 있다.
 
-🍭 환경변수에 CLASSPATH를 등록하기
+# 환경변수에 CLASSPATH를 등록하기
 
 : 시스템 속성 -- 환경변수 -- CLASSPATH와 경로를 입력하여 만든다. 혹은 cmd.exe에서 `set classpath`를 사용해서 추가한다.
 
@@ -208,9 +208,9 @@ set classpath=<`\bin 경로`>;<추가하고 싶은 경로>
 
 ---
 
---🍭 생소한 Method()
+--# 생소한 Method()
 
---🌡 화면으로부터 입력받기
+--🥤 화면으로부터 입력받기
 
 String next( )
 : 다음 토큰을 문자열로 반환. 빈 문자열인 공백은 반환하지 않는다.
@@ -288,7 +288,7 @@ charAt(0) : 문자열을 문자로 바꿀 수 있다. 예를 들면  변수 Lite
 
 변수.equalsIgnoreCase("문자열") : 대소문자 구분하지 않으며 변수와 문자열을 같은지 비교한다. 
 
---🍭 Math Class
+--# Math Class
 
 Math.random() : 난수를 만들어 낸다. 이때 난수는 실수이다.
 
@@ -300,7 +300,7 @@ Math.sqrt(변수)
 Math.log(변수)
 : 지수함수의 역함수 ( log ), 예를 들어, 3^4 = 81일때, 이때 4가 log이다.
 
---🍭 Arrays Class -- 배열의 출력, 비교, 복사, 정렬
+--# Arrays Class -- 배열의 출력, 비교, 복사, 정렬
 
 Arrays.toString(배열)
 : 1차원 배열의 모든 요소를 문자열로 변환
@@ -323,7 +323,7 @@ Arrays.deepEquals( 배열1, 배열2 )
 Arrays.sort( 배열 )
 : 배열 내 요소를 오름차순으로 정렬한다.
 
---🍭 String Class
+--# String Class
 
 charAt(int index)
 : 문자열에서 해당 위치(index)에 있는 문자를 반환. 배열에서 '배열이름[index]'로 값을 가져오는 것과 같다.
@@ -343,13 +343,13 @@ equalsIgnoreCase( )
 toCharArray( )
 : 문자열(String)을 문자배열(Char [ ])로 변환해서 반환한다. 
 
---🍭 Scanner Class
+--# Scanner Class
 
 .nextInt() : 정수를 입력
 .nextfloat() : 실수를 입력
 .nextLine() : 행단위로 문자열을 입력
 
---🍭 메모 후 정리중
+--# 메모 후 정리중
 
 생성자
 : 객체의 초기화
@@ -405,7 +405,7 @@ abstract
 
 ---
 
---💬 추후 학습할 내용!
+--🥤 추후 학습할 내용!
 
 native ( 본래의 )
 : OS가 갖고 있는 메서드로 주로 C언어로 되어있고 이를 Java에서 호출하여 사용. JVM ( Java Virtual Machine ) 밖에서 C/C++ Code로 메소드를 정의할 때 쓰는 키워드
@@ -474,7 +474,7 @@ set멤버변수이름
 Vector 클래스
 : 배열의 크기를 알아서 관리해주는 클래스
 
---💬 추후 학습할 내용!
+--🥤 추후 학습할 내용!
 ArrayList와 마찬가지로 배열의 길이를 동적으로 활용할 수 있다는 점은 같지만, Vector는 Thread-block이 구현되어 있다. 
 비슷하게 hashtable이 hashMap에 Thread-block 기능이 있으며 최근 버전에서는 Collections.syncronizedCollection, Collections.synchronizedSortedMap 등의 메소드로 내부 구현을 그대로 활용하며 Thread-block 기능을 덧붙일 수 있다.
 
@@ -546,7 +546,7 @@ class 클래스이름 extends 조상클래스 implements 인터페이스이름 {
 
 ---
 
---🌡 내부 클래스의 제어자와 접근성
+--🥤 내부 클래스의 제어자와 접근성
 : 클래스 앞에는 (default)와 public만 되지만 내부 클래스에서는 private, protected, (default), public이 가능하다.
 
 : JDK1.8의 경우, static 클래스에서만 static 멤버를 정의할 수 있다. 상수인 final static 멤버는 내부 클래스 중 Instance, static, local 클래스 안에 전부에 정의할 수 있다.
@@ -638,7 +638,7 @@ finally 블럭
 예외 되던지기( exception re-throwing)
 : 예외 처리 후 다시 예외를 발생시키는 것, 호출한 호출된 메서드 양쪽 모두에서 예외처리를 하는 것
 
---🌡 연결된 예외(chained exception)
+--🥤 연결된 예외(chained exception)
 : 예외 A가 예외 B를 발생시킨 경우, A를 B의 원인 예외(cause exception)이라 한다. 
 
 연결된 예외, 사례 1
@@ -658,7 +658,7 @@ Throwable
 
 ---
 
---🌡 File Class
+--🥤 File Class
 
 new File( filename )
 : File 클래스로 "filename"이라는 매개변수를 파일이름으로 가지는 파일 생성
@@ -702,7 +702,7 @@ public Class getClass( )
 
 *.java를 Compile하면 *.class가 생성되고 이를 실행시 Class 객체가 생성된다. 이때 객체가 Class 인스턴스.
 
---🌡 public native int hashCode( ) or public int hashCode( )
+--🥤 public native int hashCode( ) or public int hashCode( )
 : 객체 자신의 해시코드를 반환. 해싱(hashing) 알고리즘 기법에 사용되는 해시함수(hash function)을 구현. 
 
 규칙 
@@ -712,7 +712,7 @@ equals( )의 결과가 true인 두 객체의 해시코드가 같아야 하기 �
 public static native int identityHashCode(Object x)
 : 객체의 주소값의 해시코드를 반환. 모든 객체에 대해 다른 해시코드가 보장
 
---🌡 hashCode를 64bit JVM인 long 타입( 8 byte )에서 기존 32 bit JVM인 int 타입( 4 byte )으로 변환 시 중복된 값이 도출될 수 있다.
+--🥤 hashCode를 64bit JVM인 long 타입( 8 byte )에서 기존 32 bit JVM인 int 타입( 4 byte )으로 변환 시 중복된 값이 도출될 수 있다.
 
 public String toString( )
 : 객체 자신의 정보를 문자열로 반환
@@ -755,7 +755,7 @@ StringBuffer 클래스
 문자열(String)의 비교
 : equals( )는 두 문자열의 내용을 비교하며 등가비교연산자 '=='는 String인스턴스의 주소를 비교하여 결과가 다르다.
 
---🌡 문자열 리터럴(literal)은 이미 메모리할당이 이뤄진 것을 재사용하므로 등가비교연산자 '=='로도 true의 값을 얻을 수도 있다.
+--🥤 문자열 리터럴(literal)은 이미 메모리할당이 이뤄진 것을 재사용하므로 등가비교연산자 '=='로도 true의 값을 얻을 수도 있다.
 
 문자열 리터럴(String리터럴)
 : 모든 문자열 리터럴은 Compile 시에 클래스 파일에 자동으로 생성되어 저장되며 같은 내용은 한번만 저장된다. 상수와 마찬가지로 constant pool에 저장된다.
@@ -766,7 +766,7 @@ char 타입은 하나의 문자가 있어야 한다. Char c = ' ';
 
 ---
 
---🌡 String클래스의 생성자와 메서드 ( p.334 ~ p.336 참고 )
+--🥤 String클래스의 생성자와 메서드 ( p.334 ~ p.336 참고 )
 
 String(String s)
 : 주어진 문자열 s를 갖는 String인스턴스 생성
@@ -862,7 +862,7 @@ static String valueOf(double d)
 static String valueOf(Object o)
 : 지정된 값을 문자열로 변환하여 반환, 참조변수의 경우 toString( )을 호출한 결과를 반환
 
---🌡 추가 참고
+--🥤 추가 참고
 
 CharSequence
 : JDK1.4부터 추가된 인터페이스로 String, StringBuffer 등의 클래스가 구현
@@ -894,7 +894,7 @@ public StringJoiner(CharSequence delimiter, CharSequence prefix, CharSequence su
 방법 2
 : String.valueOf( 숫자로 된 참조변수 )로 숫자를 문자열로 바꿀 수 있다. 참조변수가 가리키는 인스턴스의 toString( )을 호출해 String을 얻고 결합한다. 
 
---🌡 문자열 → 기본형
+--🥤 문자열 → 기본형
 
 Boolean.parseBoolean(String s)
 Byte.parseByte(String s)
@@ -917,7 +917,7 @@ StringBuffer클래스와 생성자
 
 ---
 
---🌡 StringBuffer의 생성자와 메서드
+--🥤 StringBuffer의 생성자와 메서드
 
 StringBuffer( )
 : 16문자를 담을 수 있는 Buffer를 가진 StringBuffer 인스턴스를 생성
@@ -985,7 +985,7 @@ String substring(int start, int end)
 StringBuilder
 : StringBuffer에서 쓰레드의 동기화만 뺀 것. StringBuffer는 멀티쓰레드에서 안전(thread safe)하도록 동기화되어 있다. 이 동기화가 StringBuffer의 성능을 떨어뜨린다.
 
---🌡 참고, 대부분 예제는 싱글 쓰레드로 작성되어 있다.
+--🥤 참고, 대부분 예제는 싱글 쓰레드로 작성되어 있다.
 
 Math클래스
 : 수학계산에 유용한 메서드로 구성
@@ -993,7 +993,7 @@ Math클래스
 반올림
 : 일반적인 계산으로 정수 값에 10의 n제곱으로 곱한 뒤 10의 n제곱만큼의 정수를 .0 붙여 실수로 나누면 원하는 반올림 자리에 수를 얻는다. 
 
---🌡 Math 메서드
+--🥤 Math 메서드
 
 static double abs(double a)
 static double abs(float f)
@@ -1035,7 +1035,7 @@ static long round(float a)
 : Java는 기본형 타입 8개 ( bit, byte, short, char, int, long, float, double )은 객체로 다루지 않아 완전한 객체지향 언어가 아니라는 이야기도 한다.
 이 기본형 타입을 객체로 다루어야 할 때 쓰는 클래스가 래퍼(wrapper) 클래스이다.
 
---🌡 래퍼(wrapper) 클래스 생성자
+--🥤 래퍼(wrapper) 클래스 생성자
 
 -- boolean
 Boolean(boolean value)
@@ -1100,7 +1100,7 @@ Calendar
 java.time.클래스
 : JDK1.8부터 제공된 개선된 날짜, 시간 클래스
 
---🌡 java.util 패키지에 속한 클래스로, java.sql패키지의 Date클래스와 다르다.
+--🥤 java.util 패키지에 속한 클래스로, java.sql패키지의 Date클래스와 다르다.
 
 Calendar 클래스
 : Calendar는 추상클래스이기 때문에 직접 객체를 생성할 수 없다.
@@ -1179,7 +1179,7 @@ Calendar.ZONE_OFFSET
 날짜 인스턴스.roll(Calendar 생성자, 숫자)
 : 날짜 인스턴스의 생성자에 따라 숫자만큼 증가, 감소시키나 그 외 다른 필드에는 값이 영향이 없다. 
 
---🌡 Date와 Calendar간의 변화
+--🥤 Date와 Calendar간의 변화
 
 -- Calendar를 Date로 변환
 
@@ -1236,7 +1236,7 @@ E
 `
 : escape문자
 
---🌡 Integer.parseInt( )와 Integer.parse( )
+--🥤 Integer.parseInt( )와 Integer.parse( )
 Integer.parseInt( )는 콤마( , )가 포함된 문자열을 숫자로 변환불가 
 Integer.parse( )는 기호와 문자가 포함된 문자열을 숫자로 변환가능. substring( )는 기호를 빼내어야 하는 수고가 있다.
 
@@ -1248,7 +1248,7 @@ SimpleDateFormat
 
 이 때 다룬다는 것은 "저장, 삭제, 검색, 정렬"을 다룬다는 뜻이다.
 
---🌡 
+--🥤 
 JDK1.2 이전에는 Vector, Hashtable, Properties와 같은 Collection 클래스를 각각 방식으로 구현. 
 JDK1.2 이후에는 Collection Framework으로 모든 클래스를 다룰 수 있게 바뀌었다.
 
@@ -1276,14 +1276,14 @@ Map
 : 키(Key)와 값(Value)의 쌍(Pair)로 이뤄진 데이터의 집합. 키(Key)는 중복 허용 안 함, 값(Value)는 중복 허용.
 HashMap, TreeMap, Hashtable, Properties
 
---🌡 열쇠(key)는 어떤 값(value)을 찾는 데 열쇠(key)가 된다는 의미에서 유래.
+--🥤 열쇠(key)는 어떤 값(value)을 찾는 데 열쇠(key)가 된다는 의미에서 유래.
 
 ---
 
 Collection 인터페이스
 : List와 Set의 조상 Interface.
 
---🌡 Collection Interface의 Method( ) ( List와 Set 인터페이스의 공용 )
+--🥤 Collection Interface의 Method( ) ( List와 Set 인터페이스의 공용 )
 
 Collection은 인터페이스(Interface), Collections는 클래스(Class)이다.
 
@@ -1330,7 +1330,7 @@ Object[ ] toArray( Object[ ] a )
 
 JDK1.8 부터는 parallelStream, removeIf, stream, forEach는 람다(Lambda)와 스트림(Stream)에서 설명
 
---🌡 Java API 문서에 E, K, V 등의 기호는 지네릭스에 의한 표기로, Object 타입을 가진다.
+--🥤 Java API 문서에 E, K, V 등의 기호는 지네릭스에 의한 표기로, Object 타입을 가진다.
 
 List 인터페이스
 : List -- ArrayList / LinkedList / Vector -- Stack 
@@ -1418,7 +1418,7 @@ int size( )
 Collection values( )
 : Map에 저장된 모든 value객체를 반환
 
---🌡 Map Interface는 값(value)은 중복허용이 가능하므로 Collection타입으로 반환, 키(key)는 중복허용이 되지 않아 Set타입으로 반환
+--🥤 Map Interface는 값(value)은 중복허용이 가능하므로 Collection타입으로 반환, 키(key)는 중복허용이 되지 않아 Set타입으로 반환
 
 ---
 
@@ -1455,7 +1455,7 @@ ArrayList의 추가와 삭제
 : 삭제할 객체 마지막 객체일 경우 null로 변경, 그 외에는 삭제할 객체의 바로 아래에 데이터를 한 칸 위로 복사해 덮어쓴 뒤 마지막 객체를 null로 변경 후
 데이터의 개수(size)를 -1 만큼 감소한다.
 
---🌡 데이터의 개수가 많을 수록 작업시간이 오래 걸린다.
+--🥤 데이터의 개수가 많을 수록 작업시간이 오래 걸린다.
 
 ---
 
@@ -1510,7 +1510,7 @@ LinkedList
 
 예시, 최근 사용문서, 인쇄작업 대기목록, 버퍼(buffer)
 
---🌡 Stack method
+--🥤 Stack method
 
 Stack Class 생성자 생성
 : new Stack( )
@@ -1534,7 +1534,7 @@ int search(Object o)
 : Stack에서 주어진 객체( o )를 찾아서 그 위치를 반환. 못 찾으면 -1을 반환.
 배열과 달리 위치는 0이 아닌 1부터 시작하며 맨 위의 요소가 1이다.
 
---🌡 Queue method
+--🥤 Queue method
 
 Queue Interface 구현
 : new LinkedList( )
@@ -1562,7 +1562,7 @@ Object element( )
 Object peek( )
 : 삭제없이 요소를 읽어온다. Queue가 비었을 경우 null 반환
 
---🌡 Java API에서 Queue Interface
+--🥤 Java API에서 Queue Interface
 
 : All Known Implementing Classes에 정의된 메서드를 사용
 
@@ -1575,7 +1575,7 @@ Iterator, ListIterator, Enumeration
 ListIterator
 : Iterator에 양방향 조회기능 추가( List를 구현한 경우만 사용 )
 
---🌡 ListIterator
+--🥤 ListIterator
 
 Iterator와는 달리 next( )와 previous( )의 method가 있기 때문에 양방향으로 조회할 수 있다.
 
@@ -1586,7 +1586,7 @@ Iterator
 
 단, 조회는 1회용이라 다시 조회하려면 Iterator를 다시 얻어와야 한다.
 
---🌡 Iterator의 method
+--🥤 Iterator의 method
 
 boolean hasNext( )
 : 읽어 올 요소(Node)가 남아있는지 확인, 있으면 true, 없으면 false
@@ -1599,7 +1599,7 @@ Object next( )
 Enumeration ( 열거형 ) 
 : Iterator의 구버전
 
---🌡 Enumeration의 method
+--🥤 Enumeration의 method
 
 boolean hasMoreElements( )
 : Iterator의 hashNext( )와 같다.
@@ -1617,7 +1617,7 @@ Set Interface
 Collection Interface
 : value( )
 
---🌡 Map Interface를 구현한 Collection 클래스
+--🥤 Map Interface를 구현한 Collection 클래스
 : Iterator it = map.entrySet( ).iterator( )
 
 ---
@@ -1652,7 +1652,7 @@ sor( )
 binarySearch( )
 : 배열에 저장된 요소를 검색. 단 정렬이 선행되어야 한다.
 
---🌡 순차검색(linear search)와 이진검색(binary search)
+--🥤 순차검색(linear search)와 이진검색(binary search)
 
 순차 검색( linear search )
 : 배열의 첫 요소부터 순서대로 하나씩 검색
@@ -1711,12 +1711,12 @@ Comparable
 campareTo( )
 : 같으면 0, 비교하는 값보다 작으면 음수(내림차순), 큰 경우 양수(오름차순)
 
---🌡 오름차순은 유니코드의 순서로 작은 값부터 큰 값으로 정렬. 공백, 숫자, 대문자, 소문자의 순이다.
+--🥤 오름차순은 유니코드의 순서로 작은 값부터 큰 값으로 정렬. 공백, 숫자, 대문자, 소문자의 순이다.
 
 static void sort( Object[ ] a, Comparator c )
 : 정렬을 하려면 정렬할 대상, 정렬 기준이 필요하다.
 
---🌡 버블 정렬 공식
+--🥤 버블 정렬 공식
 
 ---
 
@@ -1740,7 +1740,7 @@ HashSet(int initialCapacity)
 HashSet(int initialCapacity, float loadFactor)
 : 초기용량과 load factor를 지정하는 생성자
 
---🌡 load factor는 저장공간이 가득 차기 전에 미리 용량을 확보하기 위함, 기본값은 75%인 0.75이다.
+--🥤 load factor는 저장공간이 가득 차기 전에 미리 용량을 확보하기 위함, 기본값은 75%인 0.75이다.
 
 boolean add(Object o)
 : 새로운 객체를 저장, 성공 시 true, 실패 시 false
@@ -1784,7 +1784,7 @@ Object[ ] toArray( )
 Object[ ] toArray( Object[ ] a )
 : 저장된 객체들을 주어진 객체배열( a )에 담기
 
---🌡 JDK1.8 부터 Stream과 관련된 메서드들도 추가되었다.
+--🥤 JDK1.8 부터 Stream과 관련된 메서드들도 추가되었다.
 
 ---
 
@@ -1807,7 +1807,7 @@ class TreeNode {
 
 ---
 
---🍫 TreeSet의 method
+--# TreeSet의 method
 
 /생성 
 
@@ -1916,19 +1916,19 @@ Object[ ] toArray( Object[ ] o )
 
 ---
 
-🍫 HashMap과 Hashtable
+# HashMap과 Hashtable
 
 : Hashtable과 HashMap의 관계는 Vector와 ArrayList와 같이 기능이 개선된 것의 차이이며 HashMap이 보다 더 개선되어 있다.
 
 만약, 순서를 유지하고자 하려면 LinkedHashMap을 사용
 
---🍬 Hashtable은 동기화가 가능, HashMap은 동기화가 가능하지 않다.
+--🥤 Hashtable은 동기화가 가능, HashMap은 동기화가 가능하지 않다.
 : 13장 쓰레드 참고
 
---🍬 TreeSet과 TreeMap
+--🥤 TreeSet과 TreeMap
 : TreeSet은 TreeMap으로 만든 클래스이기에 같은 특징을 갖고 있다.
 
---🍬 HashMap 용도
+--🥤 HashMap 용도
 
 : id 와 password 추가, 수정, 확인, 검증에도 사용 / 학점 계산  / 한정된 범위 내에 순차적인 값들의 빈도수 찾기
 
@@ -1937,23 +1937,23 @@ Object[ ] toArray( Object[ ] o )
 : 키(key)와 값(value)을 묶어 하나의 데이터(entry)로 저장한다. 
 해싱(hashing)이라는 방법으로 많은 양의 데이터를 검색하는데 탁월하다.
 
-🍫 해싱(hashing) -- 책에 없는 내용
+# 해싱(hashing) -- 책에 없는 내용
 
 : 해시함수(hash function)에 의해 해시테이블(hash table)에 데이터(베열의 index)를 읽어오거나 저장하는 것
 
-🍫 해시테이블(hash table) -- 책에 없는 내용
+# 해시테이블(hash table) -- 책에 없는 내용
 
 : 배열과 Linked list를 조합한 형태로 배열의 접근성과 Linked List에 데이터 변경의 유리함을 합쳐놓았다.
 
-🍫 해시테이블(hash table)의 데이터 가져오는 과정 -- 책에 없는 내용
+# 해시테이블(hash table)의 데이터 가져오는 과정 -- 책에 없는 내용
 
 : 키(key)로 해시함수를 호출해 해시코드(hash code)를 얻는다. --
 해시코드(해시함수의 반환 값)인 배열의 index에 대응하는 Linked List를 배열에서 찾는다. --
 Linked List에서 키(key)와 일치하는 데이터(entry)를 찾는다.
 
---🍬 해시함수는 같은 키에 대해 항상 같은 해시코드를 반환해야 한다. 
+--🥤 해시함수는 같은 키에 대해 항상 같은 해시코드를 반환해야 한다. 
 
-🍫 HashMap의 키(key)와 값(value)
+# HashMap의 키(key)와 값(value)
 
 : HashMap은 키와 값을 모두 Object로 저장
 
@@ -1965,7 +1965,7 @@ Linked List에서 키(key)와 일치하는 데이터(entry)를 찾는다.
 
 : 키(key)와 달리 데이터 중복이 가능하다.
 
-🍫 HashMap의 Method
+# HashMap의 Method
 
 / 생성
 HashMap( )
@@ -1977,7 +1977,7 @@ HashMap( int initialCapacity )
 HashMap( int initialCapacity, float loadFactor )
 : 지정된 초기용량과 load factor의 HashMap객체를 생성
 
--🌡 load factor는 저장공간이 가득 차기 전에 미리 용량을 확보하기 위함, 기본값은 75%인 0.75이다.
+-🥤 load factor는 저장공간이 가득 차기 전에 미리 용량을 확보하기 위함, 기본값은 75%인 0.75이다.
 
 Object clone( )
 : 현재 HashMap을 복제해서 반환
@@ -1994,7 +1994,7 @@ Collection values( )
 Object put( Object key, Object value )
 : 지정된 키와 값을 HashMap에 저장
 
---🍬 Hashtable에서는 키(key)와 값(value)에 null을 허용하지 않는다. HashMap에서는 map.put(null, null)이나 map.put(null)이 가능하다.
+--🥤 Hashtable에서는 키(key)와 값(value)에 null을 허용하지 않는다. HashMap에서는 map.put(null, null)이나 map.put(null)이 가능하다.
 
 void putAll( Map m )
 : Map에 저장된 모든 요소를 HashMap에 저장
@@ -2034,58 +2034,58 @@ Object getOrDefault( Object key, Object defaultValue )
 int size( )
 : HashMap에 저장된 요소의 개수를 반환
 
---🍬 Map Interface와 Entry Interface
+--🥤 Map Interface와 Entry Interface
 
 Entry Interface
 : Map의 내부 Interface
 
 ---
 
-🍫 Collection의 method
+# Collection의 method
 
 단일 컬렉션
 : checked
 
---🍬 JDK 1.5부터는 지네릭스(generics)로 사용하고 JDK1.5 이전은 checked를 사용해야 한다.
+--🥤 JDK 1.5부터는 지네릭스(generics)로 사용하고 JDK1.5 이전은 checked를 사용해야 한다.
 
 ---
 
 -- 12장부터는 메모를 줄이거나 메모를 하지 않는 중
 
-🥞 지네릭스(generics)
+# 지네릭스(generics)
 
 : 컴파일 시의 타입 체크( compile-time type check )를 하여 필요한 곳에 형변환을 해준다. 컴파일 후에는 지네릭 타입을 제거한다.
 
-🥞 제한된 지네릭 클래스
+# 제한된 지네릭 클래스
 
 <타입 extends 클래스 & 인터페이스 >
 : 제한된 클래스 내 자손들만 다루면서 인터페이스도 구현하고자 할 때 작성방법
 
-🥞 지네릭 메서드
+# 지네릭 메서드
 
 static <타입> void 메서드이름( ) { ... }
 : 반환 타입 앞에 제네릭을 정의한 경우 지네릭 메서드라 한다. 지네릭 클래스의 <타입>과는 다르다.
 
-🥞 #12-15 지네릭타입의 형변환
+#12-15 지네릭타입의 형변환
 
-🥞 #12-16 지네릭 타입의 제거
+#12-16 지네릭 타입의 제거
 
-🥞 #12.17 ~ 12.20 열거형(enum), 열거형의 정의와 사용, 열거형의 조상 Java.lang.Enum, 열거형 예제
+#12.17 ~ 12.20 열거형(enum), 열거형의 정의와 사용, 열거형의 조상 Java.lang.Enum, 열거형 예제
 
 enum 열거형이름 { 상수명1, 상수명2, 상수명3 }
 : 상수이름에 순서대로 0, 1, 2의 값이 할당된다.
 
-🥞 #12.21 ~ 12.22 열거형에 멤버 추가하기, 예제
+#12.21 ~ 12.22 열거형에 멤버 추가하기, 예제
 
 열거형 생성자는 암묵적으로 private라서, 외부에서 객체생성이 불가하다.
 
-🥞 #12.23~12.26 애너테이션(Annotation)이란?, 표준 애너테이션, @Override, @Deprecated
+#12.23~12.26 애너테이션(Annotation)이란?, 표준 애너테이션, @Override, @Deprecated
 
 Annotation ( JDK에서 기본으로 제공하는 것은 meta annotation )
 : java.lang.annotation 패키지에 포함되어 있다.
 주석이지만 주로 Compiler와 소통에 있어 유효한 정보를 제공하여 준다.
 
-🥞 #12.27~12.32 @FunctionalInterface, @SuppressWarnings, 메타 애너테이션, @Target, @Retention, @Documeted / @Inherited, @Repeatable
+#12.27~12.32 @FunctionalInterface, @SuppressWarnings, 메타 애너테이션, @Target, @Retention, @Documeted / @Inherited, @Repeatable
 
 Compile 관련은 맨 위에 '🥤 Compile ( javac.exe )'의 내용 참고
 
@@ -2099,7 +2099,7 @@ Compile 관련은 맨 위에 '🥤 Compile ( javac.exe )'의 내용 참고
 @Retention
 : @Retention(RetentionPolicy.SOURCE ( 또는 .CLASS, .RUNTIME) )으로 작성
 
-🥞 #12.34~12.39 애너테이션 타입 정의하기, 애너테이션의 요소, 모든 애너테이션의 조상, 마커 애너테이션, 애너테이션 요소의 규칙, 애너테이션의 활용
+#12.34~12.39 애너테이션 타입 정의하기, 애너테이션의 요소, 모든 애너테이션의 조상, 마커 애너테이션, 애너테이션 요소의 규칙, 애너테이션의 활용
 
 애너테이션 만들기
 : @interface 애너테이션이름 {
@@ -2122,7 +2122,7 @@ Compile 관련은 맨 위에 '🥤 Compile ( javac.exe )'의 내용 참고
 
 ---
 
-🥞 #13 쓰레드(thread), #13.1~13.6 프로세스(process)와 쓰레드(thread), 멀티쓰레딩의 장단점, 쓰레드의 실행 - start( ), start( )와 run( )
+#13 쓰레드(thread), #13.1~13.6 프로세스(process)와 쓰레드(thread), 멀티쓰레딩의 장단점, 쓰레드의 실행 - start( ), start( )와 run( )
 
 -- 프로세스와 쓰레드
 
@@ -2340,12 +2340,57 @@ stream.중간연산.중간연산.중간연산.최종연산
 
 Random클래스의 메서드( ints( ), longs( ), doubles( ) )는 무한스트림(infinite stream)이므로 limit( )도 같이 사용하여 제한할 것
 
+# 14.21~14.27 스트림 만들기 - 람다식 iterate( ), generate( ), 파일과 빈 스트림 / 스트림의 연산, 중간연산, 최종연산 / 중간연산 - skip( ), limit( ), filter( ), distinct( ) 
 
-# 14.21 스트림 만들기 - 람다식 iterate( ), generate( )
+# 14.28~14.33 스트림의 중간연산 - sorted( ), Comparator의 메서드, map( ), 예제, peek( ), flatMap
+
+# 14.34~14.39 스트림의 중간연산 - flatMap( ) 예제, Optional<T>, Optional<T> 객체 생성하기, Optional<T>객체의 값 가져오기 / OptionalInt, OptionalLong, OptionlDouble / 예제
+
+--🥤 JDK1.8부터 java.util.Optional이 추가되었다.
+
+Optional<T>
+: 이를 사용하면 반환값이 null인지 아닌지 if문으로 체크할 필요가 없다. NullPointerException이 발생하지 않는다.
+
+empty( )
+: 참조변수를 기본값으로 초기화할 때 사용한다. null로 초기화가 가능하지만 지네릭 메서드인 <T>empty( )를 사용함이 바람직하다.
+
+orElse( )
+: Optional객체에 저장된 값을 가져올 땐 get( )대신 orElse( )를 사용.
+
+--🥤 get( ) 사용시 주의
+: 값이 null일 때 NoSuchElementException이 발생
+
+orElseGet( )
+: null 을 대체할 값을 람다식으로 반환
+
+orElseThrow( )
+: null 일때! 지정된 예외를 발생시킨다.
+
+isPresent( )
+: null 이면 false, 아니면 true를 반환
+
+--🥤 OptionalInt ( OptionalLong, OptionalDouble )의 of( 0 )와 empty( )의 차이
+
+isPresent(), getAsInt()를 이용
+
+of( 0 )
+: 0이 저장
+
+empty( )
+: NoSuchElementException 발생. 
+
+둘 다 0을 저장하지만 서로 비교할 경우에는 or( 0 )과는 달리 empty( )는 저장된 값이 없다.
+
+
 
 ----
 
---🥞 나누기 %
+--🥤 정규식
+
+" +"
+: 하나 이상의 공백을 의미
+
+--🥤 나누기 %
 
 1 % 4인 경우, 몫이 0, 나머지는 1
 2 % 4인 경우, 몫이 0, 나머지는 2
@@ -2355,7 +2400,7 @@ Random클래스의 메서드( ints( ), longs( ), doubles( ) )는 무한스트림
 따라서 나누지 못하여 0이 몫이 된 경우에는 본래의 값이 그대로 나머지 값으로 된다.
 
 
---🌡 Java API 보기 
+--🥤 Java API 보기 
 : 경로는 jdk17 -- lib -- src.zip 압축풀기
 
 java.util 경로
@@ -2379,7 +2424,7 @@ File -- Import -- Project from Folder or Archive -- Directory -- Project 선택
 
 ---
 
-🍭 cmd에서 한글 깨질 경우
+# cmd에서 한글 깨질 경우
 
 chcp ( Changes the active console code page )
 
@@ -2388,21 +2433,21 @@ chcp 949를 chcp 65001( UTF-8 )로 바꾼다.
 > chcp 65001
 
 
-🍭 *.class의 JDK Version과 JVM Version이 다를 때
+# *.class의 JDK Version과 JVM Version이 다를 때
 
 java.lang.unsupportedclassversionerror: ~ 와 같은 에러가 발생할 경우, Windows -> Preferences -> Java -> Compiler -> Compiler compliance level: 를 바꾸거나
 
 고급 환경설정에서 JAVA_HOME과 PATH의 내용(경로)를 작성한 *.class의 JDK Version에 맞게 JDK를 설치해 변경한다. 
 
 
-🍭 Eclipse Setting-@author change
+# Eclipse Setting-@author change
 
 eclipse.ini
 : -Duser.name=manjuSnack 추가 혹은 Eclipse에서 Window / Preferences / Java / Code Style / Code Templates / Comments / Types에서
 
 @author ${user}를 @author manjuSnack으로 수정
 
-🍭 UTF-8 Setting
+# UTF-8 Setting
 
 github 등에 commit, push할 때 UTF-8로 바꾸지 않으면 글자가 전부 깨진다. 만약 UTF-8로 바꾸지 않고 작성한 Code는 새로 작성해야 한다.
 
