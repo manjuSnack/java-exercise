@@ -25,6 +25,10 @@ Java Install 확인
 
 만약, Java version과 Java(TM) SE Runtime Environment version이 상이한 경우에는 cmd에서 javac, java 명령어가 작동되지 않는다.
 
+--🥤 JDK1.8 혹 JDK11로 학습할 것
+
+: JDK 17이상에서는 JVM이 이상현상이 생긴다. 예제 15.12 학습을 CMD에서 실행할 경우엔 작업이 끝나지 않는 현상이 있다.
+
 # Java Spring 
 Tomcat Install 확인 ( Command Line에서 )
 : d: , cd D:\Coding\java\apache-tomcat-9.0.70\bin, startup으로 Tomcat이 잘 설치되었는지 확인할 수 있다.
@@ -2446,6 +2450,23 @@ ByteArrayInputStream()과 ByteArrayOutputStream( )
 : javac로 Compile할 경우, .java가 있는 위치에 .class파일이 생성되지만, Eclipse의 경우에는 .java는 /src에 .class는 /bin 폴더에 위치한다.
 CMD창에서 확인할 경우에는 가능한 javac로 새로 Compile할 것!
 
+--🥤 JDK1.8 혹 JDK11로 학습할 것
+
+: JDK 17이상에서는 JVM이 이상현상이 생긴다. 예제 15.12 학습을 cmd창에서 실행할 경우엔 작업이 끝나지 않는 현상이 있다.
+
+
+# 15.14~15.19 BufferedInputStream, BufferedOutputStream, 예제, SequenceInputStream, 예제, PrintStream
+
+--🥤 InputStream(OutputStream)과 BufferedInputStream(BufferedOutputStream)의 차이
+
+: InputStream(OutputStream)은 1byte씩 입출력하지만 BufferedInputStream(BufferedOutputStream)은 8192byte크기를 기본값으로 입출력한다.
+
+--🥤 PrintStream과 PrintWriter의 차이
+
+: JDK1.1부터 PrintWriter가 도입되었고, PrintWriter가 System.out을 사용하는 PrintStream보다 다양한 언어의 문자를 처리한다.
+
+다만, PrintStream의 사용빈도가 높다보니 개선된 PrintWriter와 같이 쓰이게 되었다.
+
 ----
 
 --🥤 정규식
@@ -2487,7 +2508,9 @@ File -- Import -- Project from Folder or Archive -- Directory -- Project 선택
 
 ---
 
-# cmd에서 한글 깨질 경우
+🍫 Error 모음
+
+--🥤 cmd에서 한글 깨질 경우
 
 chcp ( Changes the active console code page )
 
@@ -2496,21 +2519,44 @@ chcp 949를 chcp 65001( UTF-8 )로 바꾼다.
 > chcp 65001
 
 
-# *.class의 JDK Version과 JVM Version이 다를 때
+--🥤 *.class의 JDK Version과 JVM Version이 다를 때
 
 java.lang.unsupportedclassversionerror: ~ 와 같은 에러가 발생할 경우, Windows -> Preferences -> Java -> Compiler -> Compiler compliance level: 를 바꾸거나
 
 고급 환경설정에서 JAVA_HOME과 PATH의 내용(경로)를 작성한 *.class의 JDK Version에 맞게 JDK를 설치해 변경한다. 
 
+--🥤 STS3는 JDK 11이 호환, JDK 17 이후로는 에러 / locathost, AWS에서 Tomct Server 시작시 Error
 
-# Eclipse Setting-@author change
+참고, javaw
+: Java Runtime Environment
+
+# Tomcat Server 시작하자마자 Error
+SEVERE: 클래스 [org.springframework.web.context.ContextLoaderListener]의 애플리케이션 리스너를 설정하는 중 오류 발생
+
+-- 해결방법
+: Windows 혹 Project에서 -- Properties -- Deployment Assembly -- Add -- Java Build Path Entries -- Maven Dependencies 추가
+
+JDK 17 → 11로 변경
+: Windows -- Properties -- Java -- Installed JREs -- Add -- jdk11 찾아서 넣기 
+
+Java Compiler 17 → 11로 변경
+: Windows 혹  Project에서 -- Properties -- Java Compiler -- Compiler compiance level -- 11로 변경
+
+Project Libraries에서 JDK 17 → 11로 변경
+: Project에서 -- Properties -- Java Build Path -- Add Library -- JRE System Library -- Workspce default JRE (jdk11) / JDK 11인지 확인 
+
+Project Facets 1.6 → 11로 변경
+: Project에서 -- Properties -- Project Facets -- Java 1.6 → 11로 변경
+
+
+--🥤 Eclipse Setting-@author change
 
 eclipse.ini
 : -Duser.name=manjuSnack 추가 혹은 Eclipse에서 Window / Preferences / Java / Code Style / Code Templates / Comments / Types에서
 
 @author ${user}를 @author manjuSnack으로 수정
 
-# UTF-8 Setting
+--🥤 UTF-8 Setting
 
 github 등에 commit, push할 때 UTF-8로 바꾸지 않으면 글자가 전부 깨진다. 만약 UTF-8로 바꾸지 않고 작성한 Code는 새로 작성해야 한다.
 
