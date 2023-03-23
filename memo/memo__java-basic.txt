@@ -103,7 +103,10 @@ D:\Coding\java\jdk11\work 경로에서
 : javac 클래스명.java -encoding utf-8
 
 ch12.26 @Deprecated 참고
-javac -Xlint:deprecation 클래스명.java -encoding utf-8
+javac -Xlint:deprecation <클래스명>.java -encoding utf-8
+
+🥤 UTF-8로 인코딩하여 Java Runtime Envirement 실행하기
+java -Dfile.encoding=utf8 <클래스명>
 
 ----
 
@@ -2467,7 +2470,25 @@ CMD창에서 확인할 경우에는 가능한 javac로 새로 Compile할 것!
 
 다만, PrintStream의 사용빈도가 높다보니 개선된 PrintWriter와 같이 쓰이게 되었다.
 
+# 15.20~15.25 문자 기반 스트림 - Reader, Writer / FileReader와 FileWriter, StringReader와 StringWriter, BufferedReader와 BufferedWriter /
+InputStreamReader, OutputStreamWriter
+
+
+
 ----
+
+--🥤
+
+escape sequence
+
+\t
+: 탭
+
+\n
+: 줄바꿈
+
+\r
+: 커서를 한 줄당 맨 앞으로
 
 --🥤 정규식
 
@@ -2512,11 +2533,19 @@ File -- Import -- Project from Folder or Archive -- Directory -- Project 선택
 
 --🥤 cmd에서 한글 깨질 경우
 
-chcp ( Changes the active console code page )
+--해결방법 3가지
+
+CMD 인코딩에서
+: chcp ( Changes the active console code page )
 
 chcp 949를 chcp 65001( UTF-8 )로 바꾼다.
-
 > chcp 65001
+
+Compile 할때,
+: javac <클래스명>.java -encoding UTF-8
+
+Runtime 환경일때,
+: java -Dfile.encoding=utf8 <클래스명>
 
 
 --🥤 *.class의 JDK Version과 JVM Version이 다를 때
