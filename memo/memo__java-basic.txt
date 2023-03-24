@@ -2473,6 +2473,19 @@ CMD창에서 확인할 경우에는 가능한 javac로 새로 Compile할 것!
 # 15.20~15.25 문자 기반 스트림 - Reader, Writer / FileReader와 FileWriter, StringReader와 StringWriter, BufferedReader와 BufferedWriter /
 InputStreamReader, OutputStreamWriter
 
+# 15.26~15.31 표준 입출력(Standard I/O), 표준 입출력의 대상변경, 예제, File, 예제1, 예제2 
+
+--🥤 System.in , System.out , System.err
+
+: Java Apprication이 실행과 동시에 별도의 스트림 생성없이 자동적으로 생성해 사용할 수 있게 한다. 
+
+.in , .out , .err
+: System클래스에 선언된 클래스변수(static 변수)이다.
+
+--🥤 JDK1.5부터 java.util.Scanner클래스가 제공되면서 System.in으로 데이터를 입력받는게 편리하다.
+
+
+
 
 
 ----
@@ -2545,8 +2558,16 @@ Compile 할때,
 : javac <클래스명>.java -encoding UTF-8
 
 Runtime 환경일때,
-: java -Dfile.encoding=utf8 <클래스명>
+: java -Dfile.encoding=utf-8 <클래스명>
 
+--🥤 UTF-8 Setting
+
+github 등에 commit, push할 때 UTF-8로 바꾸지 않으면 글자가 전부 깨진다. 만약 UTF-8로 바꾸지 않고 작성한 Code는 새로 작성해야 한다.
+
+General -- Workspace - Text file encoding : Other : UTF-8
+General - Content Types - Java Class File - Default encoding : UTF-8 후  Update
+General - Editors - Text Edotprs -- Spelling - Dictionaries - Encoding : Default : UTF-8
+Web - HTML Files, CSS Files 와 JSP Files에 The following encoding will apply : Encoding : ISO 10646/Unicode(UTF-8)로 각각 변경
 
 --🥤 *.class의 JDK Version과 JVM Version이 다를 때
 
@@ -2585,14 +2606,6 @@ eclipse.ini
 
 @author ${user}를 @author manjuSnack으로 수정
 
---🥤 UTF-8 Setting
 
-github 등에 commit, push할 때 UTF-8로 바꾸지 않으면 글자가 전부 깨진다. 만약 UTF-8로 바꾸지 않고 작성한 Code는 새로 작성해야 한다.
-
-🎈 Prefereces 설정 
-General -- Workspace - Text file encoding : Other : UTF-8
-General - Content Types - Java Class File - Default encoding : UTF-8 후  Update
-General - Editors - Text Edotprs -- Spelling - Dictionaries - Encoding : Default : UTF-8
-Web - HTML Files, CSS Files 와 JSP Files에 The following encoding will apply : Encoding : ISO 10646/Unicode(UTF-8)로 각각 변경
 
 ---
