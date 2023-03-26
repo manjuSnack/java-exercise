@@ -27,6 +27,8 @@ public class Ex15_15 {
         out.println();
         out.println("user.dir=" + System.getProperty("user.dir"));
         out.println("sun.boot.class.path=" + System.getProperty("sun.boot.class.path"));
+        out.println("sun.boot.class.path=" + System.getProperty("java.endorsed.dirs"));
+        System.getProperties().list(System.out); // System관련 properties 목록보기
 
     }
 }
