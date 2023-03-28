@@ -2552,6 +2552,21 @@ InetAddress 클래스
 
 : 도메인 혹 호스트, 지역호스트에 따른 IP주소의 이름, 주소를 얻어 객체에 담거나 배열로 담는 기능
 
+# 16.7~16.13 URL(Uniform Resource Locator), URL클래스, 예제, URLConnection클래스, 예제1 ~ 예제3
+
+--🥤 URL 구성
+
+프로토콜://호스트명:포트번호/경로명/파일명?쿼리스트링#참조
+
+toURI() or toExternalForm()
+getProtocol() :// getAuthority() :getPort() / getFile()
+getProtocol() :// getAuthority() : getDefaultPort() / getPath() ? getQuery()
+
+HTTP프로토콜에서는 포트번호가 생략되면 80번이다.
+
+--🥤 Deprecated Method
+
+getDefaultRequestProperty
 
 ----
 
