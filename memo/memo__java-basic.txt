@@ -6,7 +6,35 @@ Java의 정석(기초편)
 
 ---
 
-#ch1-5~6 자바 개발도구(JDK, Java Development Kit) 설치하기, 설정하기
+# 1 자바를 시작하기 전에, 
+# 1 자바( Java Programing Language ) 
+# 1.1~자바란?, 자바의 역사, 자바언어의 특징, JVM( Java Virtual Machine )
+
+--🥤 자바의 용도
+
+빅데이터
+: Hadoop
+
+--🥤 자바의 특징
+: 운영체제(Operating System, 플랫폼)의 독립적
+
+애플릿, Applet
+: 당시, 정적인 웹페이지에 멀티미디어 요소를 접목할 수 있는 유일한 방법. 보안에 취약
+
+--🥤 자바와 JVM( Java Virtual Machine )
+
+: 자바 Application은 JVM에 종속적이며 JVM은 각 OS에 따른 JVM이 필요하다.
+
+그러나, 자바는 "Write once, run anywhere"라는 중요한 장점을 가지고 있다.
+
+# 2 자바개발환경 구축하기, #2.1 자바 개발도구(JDK) 설치하기
+
+--🥤 JDK와 JRE
+
+JDK : 자바개발도구(Java Development Kit)
+JRE : 자바실행환경(Java Runtime Environment)
+JDK : JRE + Javac.exe 등 개발에 필요한 실행파일 포함
+JRE : JVM + Java API 클래스라이브러리 포함
 
 # Java Eclipse 설치
 : JDK 11과 eclipse를 받는다. 실제로는 압축하여 USB 등에 옮겨 작업한다.
@@ -16,6 +44,9 @@ Java의 정석(기초편)
 : 환경 변수를 맨 위로 올려야 Database 작업 시 충돌 방지.
 
 아래 JAVA_HOME을 먼저 설정한 후 PATH에는 %JAVA_HOME%\bin으로 작성하여도 된다.
+
+--🥤 path
+: OS가 파일의 위치(디렉토리)를 파악하는데 사용하는 경로이다.
 
 시스템 환경 변수-시스템 변수-새로 만들기-JAVA_HOME,
 : Tomcat이 JDK가 어디에 있는지 확인하기 위한 변수
@@ -53,9 +84,20 @@ IntelliCode
 
 --🥤 F1 Key -- Configure Java Runtime에서 알맞은 JDK Version에 골라 설치.
 
-
-
 ----
+
+# p.13 #3.4 주석(Comment)
+
+/*
+Date : 2016. 1.3
+Source : Hello.java
+Author : 이름
+Email : Email
+*/
+
+예시로, 위와 같이 작성하는 활용이 필요하다.
+
+---
 
 #ch1-7 자바 API( Application Programing Interface )
 
@@ -2567,6 +2609,27 @@ HTTP프로토콜에서는 포트번호가 생략되면 80번이다.
 --🥤 Deprecated Method
 
 getDefaultRequestProperty
+
+# 16.14~16.21 소켓(socket) 프로그래밍, TCP와 UDP, TCP소켓 프로그래밍, Socket과 ServerSocket, TCP소켓 예제1, 예제2,
+UDP소켓 예제1, 예제2
+
+--🥤 소켓(socket)
+
+: 프로세스 간의 통신에 사용되는 양쪽 끝단(endpoint)을 의미
+
+--🥤 TCP와 UDP
+
+TCP ( Transmission Control Protocol )
+: 연결지향 링크(connection-oriented links)로 1:1 통신방식의 전화기에 비유
+
+UDP ( User Datagram Protocol / Universal Datagram Protocol )
+: 비연결지향(connectionless-oriented links)로 1:1 ~ n:n 통신방식의 소포에 비유
+
+--🥤 TCP Port
+
+호스트( ip 주소 )마다 0 ~ 65536개의 포트를 가지고 있다.
+
+0~1023번 이하의 포트는 FTP, Telnet과 같은 기존 통신 프로그램에 의해 사용된다. 주로 1023번 이상의 번호 중 사용하지 않는 포트로 사용한다.
 
 ----
 
